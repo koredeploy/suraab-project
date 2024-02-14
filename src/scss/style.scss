@@ -1,12 +1,13 @@
-@use 'global';
-@use 'utils';
+@use "global";
+@use "utils";
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
-  font-family: 'MonoLisa-Regular';
-  src: local('MonoLisa-Regular'),
-  url('src/scss/global/fonts/MonoLisa-Regular.ttf') format('ttf');
+  font-family: "FiraCode-Regular";
+  src: local("FiraCode-Regular"), url("../fonts/FiraCode-Regular.woff") format("truetype");
+  font-weight: bold;
 }
