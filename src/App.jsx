@@ -1,11 +1,14 @@
 
 import './App.css'
+import Footer from './components/Footer/Footer'
+import Navbar from './components/Navbar/Navbar'
 
 function App() {
   // const [count, setCount] = useState(0)
 
   return (
     <>
+    <Navbar />
     <h1 className=' text-red-800 text-center'>hello world</h1>
       {/* <div>
         <a href="https://vitejs.dev" target="_blank">
@@ -27,6 +30,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
+      <Footer />
     </>
   )
 }
