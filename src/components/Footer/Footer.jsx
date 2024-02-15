@@ -1,10 +1,9 @@
-import React from 'react'
 import ContactBtn from '../ContactBtn/ContactBtn'
 
 
 const Footer = () => {
   return (
-    <div className='mt-60 bg-slate-950 text-white py-10'>
+    <div className='mt-60 bg-black-100 text-white-100 py-10'>
         <div className='grid lg:grid-cols-3 grid-cols-1 p-6 gap-8' style={{ maxWidth: "1440px", margin: "auto" }}>
             <div className='flex flex-col gap-5 items-start'>
                 <img src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png" alt="" />

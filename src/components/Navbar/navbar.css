@@ -1,4 +1,6 @@
-
+.bg-black {
+  background-color: rgba(0, 0, 0, 0.926) !important;
+}
 
 nav a::after {
   content: "";
@@ -28,8 +30,7 @@ nav a::after {
 
 
 @media screen and (max-width: 976px) {
-  header {
-    .menu {
+  header .menu {
       display: block !important;
       background-color: rgba(0, 0, 0, 0.926) !important;
       position: fixed;
@@ -41,7 +42,7 @@ nav a::after {
       animation: spin 0.4s ease-in-out;
       transition: all 0.5s ease-in-out;
       z-index: 10;
-    }
+    
   }
 
   @keyframes spin {

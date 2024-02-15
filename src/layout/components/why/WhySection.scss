@@ -1,0 +1,7 @@
+@use "../../../scss/style.scss";
+@use "../../../scss/utils/functions" as fn;
+
+.img-card{
+  width: fn.rem(137);
+  height: fn.rem(137);
+}

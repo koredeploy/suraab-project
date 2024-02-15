@@ -1,0 +1,24 @@
+@use "global";
+@use "utils";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "BarlowSemiCondensed-Regular";
+  src: local("BarlowSemiCondensed-Regular"), url("../fonts/BarlowSemiCondensed-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "BricolageGrotesque-Regular";
+  src: local("BricolageGrotesque-Regular"), url("../fonts/BricolageGrotesque-Regular.ttf") format("truetype");
+  font-weight: 700;
+}
+
+
+
+
+// src/fonts/BricolageGrotesque-Regular.ttf

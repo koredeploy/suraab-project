@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import './navbar.css'
 import ContactBtn from "../ContactBtn/ContactBtn";
@@ -13,8 +13,8 @@ const Navbar = () => {
   }
   
   return (
-    <div className="bg-black bg-opacity-70 fixed w-full">
-      <header style={{ maxWidth: "1440px", margin: "auto" }} className="relative flex justify-between items-center py-6 px-6">
+    <div className="bg-black bg-opacity-70 top-0 w-full">
+      <header style={{ maxWidth: "1440px", margin: "auto" }} className="relative text-white-100 flex justify-between items-center py-6 px-6">
         <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full">
         <img src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png" alt="" className="rounded-sm" />
         <div className="lg:hidden block" onClick={() => setShow(!show)}><Hamburger color="red"/></div>
@@ -23,24 +23,19 @@ const Navbar = () => {
       <div className={`${show && "menu"} lg:flex items-center justify-between w-3/4 hidden lg:border-0 border-t-2 border-stone-700`}>
         <nav>
           <ul className="flex lg:flex-row flex-col gap-16 text-white">
-            <li>
-              <a href="" onClick={() => handleClick(0)} className= {`${isActive === 0 && "active"} relative`}>Home</a>
-                
-              {/* <Link to="/">Home</Link> */}
+            <li>  
+              <Link to="/" onClick={() => handleClick(0)} className= {`${isActive === 0 && "active"} relative`}>Home</Link>
             </li>
             <li>
-            <a href="/" onClick={() => handleClick(1)} className= {`${isActive === 1 && "active"} relative`}> About</a>
-              {/* <Link>About</Link> */}
+              <Link onClick={() => handleClick(1)} className= {`${isActive === 1 && "active"} relative`}>About</Link>
             </li>
             <li>
-              <a href="" onClick={() => handleClick(2)} className= {`${isActive === 2 && "active"} relative`}>Services</a>
             
-              {/* <Link>About</Link> */}
+              <Link onClick={() => handleClick(2)} className= {`${isActive === 2 && "active"} relative`}>Services</Link>
             </li>
             <li>
-              <a href="" onClick={() => handleClick(3)} className= {`${isActive === 3 && "active"} relative`}>Contact</a>
             
-              {/* <Link>About</Link> */}
+              <Link onClick={() => handleClick(3)} className= {`${isActive === 3 && "active"} relative`}>Contact</Link>
             </li>
           </ul>
         </nav>
