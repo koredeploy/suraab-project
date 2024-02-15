@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import './navbar.scss'
+import './navbar.css'
 import ContactBtn from "../ContactBtn/ContactBtn";
 import { Sling as Hamburger } from 'hamburger-react'
 
