@@ -25,7 +25,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "FiraCode-Regular", sans-serif;
+  font-family: "BarlowSemiCondensed-Regular", sans-serif;
 }
 
 a,
@@ -33,6 +33,10 @@ a:visited,
 a:active {
   cursor: pointer;
   text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: "BricolageGrotesque-Regular", sans-serif;
 }
 
 ul {
