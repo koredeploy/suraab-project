@@ -1,0 +1,10 @@
+@use '../../../../scss/style.scss';
+@use '../../../../scss/global/colors' as color;
+
+.sec2{
+    background-color: color.$red-200;
+    .border-img{
+        width: 100%;
+        max-width: 495px ;
+    }
+}
