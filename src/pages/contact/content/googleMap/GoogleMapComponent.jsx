@@ -7,7 +7,7 @@ const AnyReactComponent = () => (
   <div
     style={{
       color: "white",
-    //   background: "grey",
+      //   background: "grey", // Commented out background color
       padding: "15px 10px",
       display: "inline-flex",
       textAlign: "center",
@@ -31,9 +31,7 @@ class GoogleMapComponent extends React.Component {
     return (
       <div style={{ width: "100%", height: "400px" }}>
         <GoogleMapReact
-          bootstrapURLKeys={{
-            key: "AIzaSyD4MTAl6UAFSx2gGCMRPwDy8UWsCbveIY8", // Add your API key here
-          }}
+          bootstrapURLKeys={{ key: "AIzaSyD4MTAl6UAFSx2gGCMRPwDy8UWsCbveIY8" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
         >
@@ -53,3 +51,16 @@ GoogleMapComponent.propTypes = {
 };
 
 export default GoogleMapComponent;
+
+{
+  /* <GoogleMapReact
+          bootstrapURLKeys={{
+            key: "AIzaSyD4MTAl6UAFSx2gGCMRPwDy8UWsCbveIY8", // Add your API key here
+          }}
+          defaultCenter={this.props.center}
+          defaultZoom={this.props.zoom}
+        >
+            
+          <AnyReactComponent lat={6.535830253006408} lng={3.366019494729256} />
+        </GoogleMapReact> */
+}
