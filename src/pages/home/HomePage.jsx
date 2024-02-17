@@ -1,9 +1,10 @@
 import React from 'react'
+import FadedCarousel from '../../layout/sharedLayout/fadedCarousel/FadedCarousel'
 
 const HomePage = () => {
   return (
-    <div className='h-screen'>
-        <h1>Home </h1>
+    <div className=''>
+        <FadedCarousel/>
         
     </div>
   )
