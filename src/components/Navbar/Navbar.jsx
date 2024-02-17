@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import './navbar.css'
+import './Navbar.scss'
 import ContactBtn from "../ContactBtn/ContactBtn";
 import { Sling as Hamburger } from 'hamburger-react'
 
@@ -14,7 +14,7 @@ const Navbar = () => {
   
   return (
     <div className="bg-black bg-opacity-70 top-0 w-full">
-      <header style={{ maxWidth: "1440px", margin: "auto" }} className="relative text-white-100 flex justify-between items-center py-6 px-6">
+      <header style={{ maxWidth: "1440px", margin: "auto" }} className="relative w-11/12 text-white-100 flex justify-between items-center py-6 ">
         <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full">
         <img src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png" alt="" className="rounded-sm" />
         <div className="lg:hidden block" onClick={() => setShow(!show)}><Hamburger color="red"/></div>
@@ -31,7 +31,7 @@ const Navbar = () => {
             </li>
             <li>
             
-              <Link onClick={() => handleClick(2)} className= {`${isActive === 2 && "active"} relative`}>Services</Link>
+              <Link to="/service" onClick={() => handleClick(2)} className= {`${isActive === 2 && "active"} relative`}>Services</Link>
             </li>
             <li>
             
