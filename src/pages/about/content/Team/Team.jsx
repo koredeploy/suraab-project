@@ -14,22 +14,22 @@ const Team = () => {
             </div>
             <div className="p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 place-items-center">
                 <div>
-                    <img src={team_member_1} alt="" />
+                    <img src={team_member_1} alt="" className=" w-72 h-80 object-cover rounded" />
                     <p className="text-black-200">Benjamin White</p>
                     <p className="text-black-100">Electrician</p>
                 </div>
                 <div>
-                    <img src={team_member_2} alt="" />
+                    <img src={team_member_2} alt="" className=" w-72 h-80 object-cover rounded" />
                     <p className="text-black-200">Benjamin White</p>
                     <p className="text-black-100">Electrician</p>
                 </div>
                 <div>
-                    <img src={team_member_3} alt="" />
+                    <img src={team_member_3} alt="" className=" w-72 h-80 object-cover rounded" />
                     <p className="text-black-200">Benjamin White</p>
                     <p className="text-black-100">Electrician</p>
                 </div>
-                <div>
-                    <img src={team_member_4} alt="" />
+                <div> 
+                    <img src={team_member_4} alt="" className=" w-72 h-80 object-cover rounded" />
                     <p className="text-black-200">Benjamin White</p>
                     <p className="text-black-100">Electrician</p>
                 </div>
