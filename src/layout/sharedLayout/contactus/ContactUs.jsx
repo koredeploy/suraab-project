@@ -18,7 +18,7 @@ const ContactUs = () => {
               type="text"
               name=""
               id=""
-              className=" p-3 "
+              className=" p-3 w-1/2 "
               placeholder="Your Email"
             />
             <button type="submit " className=" bg-red-400 p-3 ">

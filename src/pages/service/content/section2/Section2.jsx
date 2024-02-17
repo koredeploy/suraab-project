@@ -8,7 +8,7 @@ const Section2 = () => {
   return (
     <div className="sec2">
       <div className="responsive w-11/12 mx-auto py-12">
-        <h1 className="text-center large-text w-1/2 pb-5 mx-auto">
+        <h1 className="text-center large-text w-full lg:w-1/2 pb-5 mx-auto">
           Explore Our Services Suraab Electricals
         </h1>
         <div className="grid grid-cols-1 gap-20">
@@ -19,25 +19,25 @@ const Section2 = () => {
               className="border-img border-8 border-white-100 "
             />
             <div className="grid grid-cols-1 gap-3">
-              <h4 className="large-text">Electrical Troubleshooting</h4>
-              <p className="medium-text">
+              <h4 className="large-text text-center lg:text-start">Electrical Troubleshooting</h4>
+              <p className="medium-text text-center lg:text-start">
                 Lorem ipsum dolor sit amet consectetur. Eget fames dignissim dui
                 eu quam quisque nunc in. Nam auctor vulputate ultrices
                 tincidunt. Mus quis dignissim adipiscing viverra et. Rutrum sit
                 sem pellentesque laoreet arcu nisl imperdiet. Sodales lectus
                 consequat dignissim facilisis in at in vivamus magna.
               </p>
-              <h4>Our Installation Methods</h4>
-              <div className="flex gap-2 items-center">
+              <h4 className="large-text text-center lg:text-start">Our Installation Methods</h4>
+              <div className="flex  gap-2 items-center">
                 <span>
                   <img src={check} alt="" />
                 </span>
-                <p className="medium-text">
+                <p className="medium-text ">
                   We bring a level of craftsmanship to our projects that
                   reflects our dedication to quality and precision.
                 </p>
               </div>
-              <div className="flex gap-2 items-center">
+              <div className="flex gap-2 items-center ">
                 <span>
                   <img src={check} alt="" />
                 </span>
@@ -46,7 +46,9 @@ const Section2 = () => {
                   the efficiency and sustainability of electrical systems.
                 </p>
               </div>
-              <ContactBtn/>
+             <div className="flex justify-center lg:justify-start">
+             <ContactBtn/>
+             </div>
             </div>
           </div>
           <div className="flex flex-col lg:flex-row gap-5 items-center ">
@@ -56,15 +58,15 @@ const Section2 = () => {
               className="border-img border-8 border-white-100 "
             />
             <div className="grid grid-cols-1 gap-3">
-              <h4 className="large-text">Electrical Troubleshooting</h4>
-              <p className="medium-text">
+              <h4 className="large-text text-center lg:text-start">Lighting Installations</h4>
+              <p className="medium-text text-center lg:text-start">
                 Lorem ipsum dolor sit amet consectetur. Eget fames dignissim dui
                 eu quam quisque nunc in. Nam auctor vulputate ultrices
                 tincidunt. Mus quis dignissim adipiscing viverra et. Rutrum sit
                 sem pellentesque laoreet arcu nisl imperdiet. Sodales lectus
                 consequat dignissim facilisis in at in vivamus magna.
               </p>
-              <h4>Our Installation Methods</h4>
+              <h4 className="large-text text-center lg:text-start">Our Installation Methods</h4>
               <div className="flex gap-2 items-center">
                 <span>
                   <img src={check} alt="" />
@@ -83,9 +85,12 @@ const Section2 = () => {
                   the efficiency and sustainability of electrical systems.
                 </p>
               </div>
+                <div className="flex justify-center lg:justify-start">
                 <ContactBtn/>
+                </div>
             </div>
           </div>
+
           <div className="flex flex-col lg:flex-row gap-5 items-center ">
             <img
               src={s3}
@@ -93,36 +98,15 @@ const Section2 = () => {
               className="border-img border-8 border-white-100 "
             />
             <div className="grid grid-cols-1 gap-3">
-              <h4 className="large-text">Electrical Troubleshooting</h4>
-              <p className="medium-text">
-                Lorem ipsum dolor sit amet consectetur. Eget fames dignissim dui
-                eu quam quisque nunc in. Nam auctor vulputate ultrices
-                tincidunt. Mus quis dignissim adipiscing viverra et. Rutrum sit
-                sem pellentesque laoreet arcu nisl imperdiet. Sodales lectus
-                consequat dignissim facilisis in at in vivamus magna.
+              <h4 className="large-text text-center lg:text-start">Electrical Maintenance</h4>
+              <p className="medium-text text-center lg:text-start">
+              Lorem ipsum dolor sit amet consectetur. Fermentum ut arcu morbi turpis neque. Amet malesuada vivamus egestas rhoncus ultrices. Phasellus aliquam magna aliquam pellentesque pretium. Quis vitae molestie aliquam nibh tincidunt in quam vestibulum. Tortor eget varius diam mauris volutpat vitae urna. Adipiscing imperdiet interdum pellentesque nulla convallis mattis quam. Ultrices porttitor ridiculus ac sed odio vitae lorem. Pellentesque ac pulvinar magna aliquet dictumst. Nulla diam lorem id orci gravida. Quam dictum sed sit bibendum et congue vel dui. Egestas tincidunt nec sit rhoncus nibh. Quis risus vestibulum risus pretium in neque malesuada amet lobortis.
+Habitant molestie in eget et dictumst. Praesent eu sed sollicitudin urna tempor senectus eros. Placerat ut nunc.
               </p>
-              <h4 className="medium-text font-bold  ">
-                Our Installation Methods
-              </h4>
-              <div className="flex gap-2 items-center">
-                <span>
-                  <img src={check} alt="" />
-                </span>
-                <p className="medium-text">
-                  We bring a level of craftsmanship to our projects that
-                  reflects our dedication to quality and precision.
-                </p>
-              </div>
-              <div className="flex gap-2 items-center">
-                <span>
-                  <img src={check} alt="" />
-                </span>
-                <p className="medium-text">
-                  Subhar Electricals introduces innovative practices to enhance
-                  the efficiency and sustainability of electrical systems.
-                </p>
-              </div>
+             
+              <div className="flex justify-center lg:justify-start">
               <ContactBtn/>
+              </div>
             </div>
           </div>
         </div>
