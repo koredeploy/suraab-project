@@ -2,7 +2,7 @@
 @use '../../../../scss/global/colors' as color;
 @use '../../../../scss/utils/mixins' as mixins;
 
-.sec2{
+.section-two{
     background-color: color.$red-200;
     .responsive{
       @include mixins.responsive

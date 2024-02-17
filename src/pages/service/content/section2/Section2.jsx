@@ -6,7 +6,7 @@ import "./Section2.scss";
 import ContactBtn from "../../../../components/ContactBtn/ContactBtn";
 const Section2 = () => {
   return (
-    <div className="sec2">
+    <div className="section-two">
       <div className="responsive w-11/12 mx-auto py-12">
         <h1 className="text-center large-text w-full lg:w-1/2 pb-5 mx-auto">
           Explore Our Services Suraab Electricals

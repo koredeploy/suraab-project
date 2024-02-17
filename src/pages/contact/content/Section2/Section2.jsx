@@ -17,8 +17,8 @@ const Section2 = () => {
     console.log(data);
   };
   return (
-    <div className="py-9">
-      <div className="container mx-auto p-4 md:p-8 rounded-lg w-full md:w-auto flex flex-col lg:flex-row items-center gap-12 p-10">
+    <div className="py-9 responsive w-11/12 mx-auto">
+      <div className="container mx-auto  rounded-lg w-full md:w-auto flex flex-col lg:flex-row items-center gap-12 ">
         <div className="flex flex-col gap-11">
           <div className="flex flex-col">
             <h3 className="text-black-500 large-text">Get in Touch</h3>

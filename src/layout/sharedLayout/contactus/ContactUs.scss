@@ -1,9 +1,15 @@
 .contact-bg{
-    background-image: url(../../../assets/contact_bg_image.png);
+    background-image: url();
     background-repeat: no-repeat;
     object-fit: conver;
     background-size: cover;
-    position: center;
+    background-position: center;
 }
-
+.contact-background{
+    background-image: url(../../../assets/formBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 50vh;
+}
 
