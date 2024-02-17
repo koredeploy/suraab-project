@@ -1,14 +1,16 @@
 @use "../../../scss/global/colors" as color;
+@use "../../../scss/utils/functions" as fn;
 
 .carousel {
   display: flex;
-  height: 500px;
+  height: fn.rem(500);
   width: 100%;
   min-height: 60vh;
 }
-@media( width < 1024px){
+@media (width < 1024px) {
   .carousel {
     min-height: 30vh;
+    height: fn.rem(350);
   }
 }
 .carousel_wrapper {
