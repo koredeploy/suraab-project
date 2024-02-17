@@ -22,7 +22,7 @@ const Navbar = () => {
 
       <div className={`${show && "menu"} lg:flex items-center justify-between w-3/4 hidden border-0 lg:border-0 border-t-2 border-stone-700`}>
         <nav>
-          <ul className="flex lg:flex-row flex-col gap-16 text-white">
+          <ul className="flex lg:flex-row flex-col gap-16 text-white ">
             <li>  
               <Link to="/" onClick={() => handleClick(0)} className= {`${isActive === 0 && "active"} relative`}>Home</Link>
             </li>
