@@ -6,7 +6,7 @@ import './WhySection.scss'
 const WhySection = () => {
   return (
     <div className='bg-red-500'>
-        <div className='w-11/12 mx-auto text-white-100 text-center lg:text-left leading-9 py-14'>
+        <div className='w-11/12 mx-auto text-white-100 text-center lg:text-left leading-9 py-14 responsive'>
           <div className='py-3'>
           <p className='text-center text-white-100 large-text'>WHY SURAAB ?</p>
             <h2 className='text-center text-white-100 large-text py-5 w-full lg:w-2/3 mx-auto'>Lorem ipsum dolor sit amet consectetur. Lobortis porttitor</h2>

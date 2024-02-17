@@ -4,7 +4,7 @@ import profileImg from '../../../assets/profileImage.png'
 const Testimonial = () => {
   return (
     <div>
-      <div className=" w-11/12 mx-auto py-10 ">
+      <div className=" w-11/12 mx-auto py-10 responsive ">
         <p className="text-center large-text">WHAT OUR CUSTOMERS SAY</p>
         <h2 className="text-red-400 text-center large-text">
           Don’t Just Take Our Word For It.
