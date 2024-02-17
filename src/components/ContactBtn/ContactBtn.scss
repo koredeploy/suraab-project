@@ -1,0 +1,28 @@
+@use "../../scss/utils/functions" as fn;
+@use "../../scss/global/colors" as color;
+
+.contact_btn {
+  button {
+    transition: all 0.7s ease-in;
+    .btn_effect {
+      width: 0 !important;
+      height: 100%;
+      background-color: color.$black-500 !important;
+      position: absolute !important;
+      z-index: -1 !important;
+      top: 0;
+      left: 0;
+      transition: width 0.4s ease-in;
+    }
+  }
+
+  button:hover {
+    background: transparent;
+  }
+
+  button:hover {
+    .btn_effect {
+      width: 100% !important;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@use "../../../../scss/utils/functions" as fn;
+.about_bg {
+    background: url("../../../../assets/about_bg.svg");
+    height: fn.rem(460);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+}

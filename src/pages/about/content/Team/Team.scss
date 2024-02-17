@@ -1,0 +1,5 @@
+@use "../../../../scss/global/colors" as color;
+
+.about_team_bg {
+    background-color: color.$red-200;
+}

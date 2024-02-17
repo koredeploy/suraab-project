@@ -1,27 +1,31 @@
 import ContactBtn from '../ContactBtn/ContactBtn'
+import suraab_logo from "../../assets/suraab_logo.svg"
+import { Link } from 'react-router-dom'
 
 
 const Footer = () => {
   return (
-    <div className='mt-60 bg-black-100 text-white-100 py-10'>
-        <div className='grid lg:grid-cols-3 grid-cols-1 p-6 gap-8' style={{ maxWidth: "1440px", margin: "auto" }}>
+    <div className=' bg-black-200 text-white-100 py-10'>
+        <div className='grid lg:grid-cols-3 grid-cols-1 p-6 lg:pb-14 gap-8 lg:place-items-center' style={{ maxWidth: "1440px", margin: "auto" }}>
             <div className='flex flex-col gap-5 items-start'>
-                <img src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png" alt="" />
-                <p>Join me as I share timeless secrets on how to build your own academy that generates millions monthly.</p>
+                <Link to="/"><img src= {suraab_logo} alt="" /></Link>
+                <p className=' max-w-96'>Join me as I share timeless secrets on how to build your own academy that generates millions monthly.</p>
+                <div>
                 <ContactBtn />
+                </div>
             </div>
             <div className='flex flex-col lg:ps-20 gap-5 items-start'>
                 <h2 className='text-2xl font-semibold'>Quick Links</h2>
                 <ul className='flex flex-col gap-3'>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Services</li>
-                    <li>Contact Us</li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/about">About Us</Link></li>
+                    <li><Link to="/service">Services</Link></li>
+                    <li><Link to="/contact">Contact Us</Link></li>
                 </ul>
             </div>
             <div className='flex flex-col gap-3 items-start'>
                 <h2 className='text-2xl font-semibold'>Contact Us</h2>
-                <p>158, Ikotun - Idumu Road, Nobex Bus Stop, Idumu Lagos.</p>
+                <p className='w-64'>158, Ikotun - Idumu Road, Nobex Bus Stop, Idumu Lagos.</p>
                 <p>08029074622</p>
                 <p>09032528531</p>
             </div>
