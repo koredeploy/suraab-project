@@ -1,0 +1,5 @@
+@use '../../../scss/utils/functions' as fn;
+.profile-img{
+    width: fn(79);
+    height: fn(79);
+}
