@@ -16,7 +16,7 @@ const router = createBrowserRouter(
       <Route index path="/" element={<HomePage />} />
       <Route path="/service" element={<ServicePage />} />
       {/* <Route path="/carousel" element={<FadedCarousel  />} /> */}
-      <Route path="/contactUs" element={<ContactUsPage />} />
+      <Route path="/contactus" element={<ContactUsPage />} />
     </Route>
   )
 );

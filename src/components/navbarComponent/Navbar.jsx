@@ -35,7 +35,7 @@ const Navbar = () => {
             </li>
             <li>
             
-              <Link onClick={() => handleClick(3)} className= {`${isActive === 3 && "active"} relative`}>Contact</Link>
+              <Link to="/contactus" onClick={() => handleClick(3)} className= {`${isActive === 3 && "active"} relative`}>Contact</Link>
             </li>
           </ul>
         </nav>
