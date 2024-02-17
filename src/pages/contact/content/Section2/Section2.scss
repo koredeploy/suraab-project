@@ -1,14 +1,8 @@
+
 @use '../../../../scss/style.scss';
 @use '../../../../scss/global/colors' as color;
 @use '../../../../scss/utils/mixins' as mixins;
 
-.section-two{
-    background-color: color.$red-200;
     .responsive{
       @include mixins.responsive
     }
-    .border-img{
-        width: 100%;
-        max-width: 495px ;
-    }
-}

@@ -1,5 +1,5 @@
 
-import './contactbtn.css'
+import './contactbtn.scss'
 
 const ContactBtn = () => {
   return (

@@ -1,0 +1,17 @@
+@use '../../../../scss/style.scss';
+@use '../../../../scss/global/colors' as color;
+@use '../../../../scss/utils/mixins' as mixins;
+@use '../../../../scss/utils/functions' as fn;
+
+.section-body{
+  background-color: color.$red-300;
+  .responsive{
+    @include mixins.responsive;
+
+    .img-box{
+      max-width: fn.rem(363);
+      margin: auto;
+    }
+  }
+
+}

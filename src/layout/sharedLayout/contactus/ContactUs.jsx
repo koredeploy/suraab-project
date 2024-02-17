@@ -1,27 +1,61 @@
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import "./ContactUs.scss";
+import { useNavigate } from "react-router-dom";
 
 const ContactUs = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate(); // Initialize useNavigate hook
+
+  const onSubmit = () => {
+    // Redirect to the contact form page with the email address as a query parameter
+    const encodedEmail = encodeURIComponent(email);
+    navigate(`/contactus?email=${encodedEmail}`); // Use navigate instead of window.location.href
+  };
+
   return (
-    <div className="contact-bg  ">
-      <div className="text-white-100 py-10 text-center w-11/12 mx-auto grid grid-cols-1 gap-7">
+    <div className="contact-background flex flex-col items-center justify-center">
+      <div className="text-white-100 py-10 text-center w-11/12 mx-auto grid grid-cols-1 gap-7 responsive">
         <h1 className="text-white-100 large-text ">
           Ready to Book Your First Service
         </h1>
-        <p className="w-full ">
+        <p className="w-full lg:w-3/5 mx-auto medium-text ">
           Our mission is to redefine excellence in electrical solutions,
           illuminating homes and lives with a commitment to safety, reliability,
           and innovation. We embark on this mission
         </p>
         <div>
-          <form action="" className="flex py-5 justify-center">
-            <input
-              type="text"
-              name=""
-              id=""
-              className=" p-3 "
-              placeholder="Your Email"
-            />
-            <button type="submit " className=" bg-red-400 p-3 ">
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="flex py-5 justify-center"
+          >
+            <div className="relative w-1/2">
+              <input
+                type="email"
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /\S+@\S+\.\S+/,
+                    message: "Invalid email address",
+                  },
+                })}
+                className="p-3 w-full text-black-500"
+                placeholder="Your Email"
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              {errors.email && (
+                <div className="absolute bottom-[-25px] left-0 text-white-500 text-sm">
+                  {errors.email.type === "required" && "Email is required. "}
+                  {errors.email.type === "pattern" && "Invalid email address. "}
+                </div>
+              )}
+            </div>
+            <button type="submit" className="bg-red-400 p-3">
               Contact us
             </button>
           </form>

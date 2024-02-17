@@ -3,8 +3,10 @@
 
 
 .service-bg{
-    background-image: url(../../../../assets/service-bg.png);
+    background-image: url(../../../../assets/service_page_bg.png);
     background-repeat: no-repeat;
     object-fit: cover;
     background-size: cover;
+    height: 50vh;
+    background-position:center;
 }
