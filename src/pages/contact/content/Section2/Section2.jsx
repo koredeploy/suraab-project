@@ -8,31 +8,37 @@ import { useForm } from "react-hook-form";
 
 const Section2 = () => {
   const location = useLocation();
-  const [emailAddress, setEmailAddress] = useState("");
+  const [formSubmitted, setFormSubmitted] = useState(false); // State to track form submission
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+    setValue,
+  } = useForm(); // Destructure useForm
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const emailParam = searchParams.get("email");
     if (emailParam) {
-      setEmailAddress(emailParam);
+      setValue("email", emailParam); // Set email value using setValue
     }
-  }, [location.search]);
-
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    trigger, // Destructure trigger function
-  } = useForm();
+  }, [location.search, setValue]); // Add setValue as a dependency
 
   const onSubmit = (data) => {
     // Handle form submission (send email, save to Excel sheet, etc.)
     console.log(data);
+    setFormSubmitted(true); // Set form submission state to true
+    setTimeout(() => {
+      setFormSubmitted(false); // Reset form submission state after 2 seconds
+      reset(); // Reset form data
+      window.location.href = "/contactus";
+    }, 2000);
   };
 
   return (
     <div className="py-9 responsive w-11/12 mx-auto">
-      <div className="container mx-auto  rounded-lg w-full md:w-auto flex flex-col lg:flex-row items-center gap-12 ">
+      <div className="container mx-auto rounded-lg w-full md:w-auto flex flex-col lg:flex-row items-center gap-12">
         <div className="flex flex-col gap-11">
           <div className="flex flex-col">
             <h3 className="text-black-500 large-text">Get in Touch</h3>
@@ -131,8 +137,6 @@ const Section2 = () => {
                   },
                 })}
                 className="w-full border border-[#ebebeb] rounded-md p-2"
-                onBlur={() => trigger("email")}
-                value={emailAddress} // Add this line to set the value of the input field
               />
               {errors.email && (
                 <p className="text-red-500">{errors.email.message}</p>
@@ -161,9 +165,13 @@ const Section2 = () => {
             </div>
             <button
               type="submit"
-              className="bg-red-400 text-white-100 py-2 px-4  hover:bg-black-600 transition duration-300"
+              className={`bg-red-400 text-white-100 py-2 px-4  hover:bg-black-600 transition duration-300 ${
+                formSubmitted ? "opacity-50 cursor-not-allowed" : ""
+              }`} // Add conditional styling based on formSubmitted state
+              disabled={formSubmitted} // Disable button when form is submitted
             >
-              Submit Now
+              {formSubmitted ? "Submitting..." : "Submit Now"}{" "}
+              {/* Change button text based on formSubmitted state */}
             </button>
           </form>
         </div>
