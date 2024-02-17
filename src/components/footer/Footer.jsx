@@ -1,4 +1,5 @@
 import ContactBtn from '../ContactBtn/ContactBtn'
+import './Footer.scss'
 
 
 const Footer = () => {
