@@ -72,7 +72,9 @@ const Section2 = () => {
               </div>
               <span>
                 <h5 className="text-black-100">Email Address</h5>
-                <h2 className="text-black-500 medium-text">{emailAddress}</h2>
+                <h2 className="text-black-500 medium-text">
+                  +234 675 8935 675
+                </h2>
               </span>
             </div>
           </div>
@@ -81,20 +83,39 @@ const Section2 = () => {
           <h2 className="text-black-500 large-text mb-2">Quick Contact</h2>
           <p className="text-black-100 mb-4">Drop us a message</p>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-            <div className="mb-4">
-              <label htmlFor="name" className="block mb-1">
-                Name
-              </label>
-              <input
-                id="name"
-                type="text"
-                {...register("name", { required: "Name is required" })}
-                className="w-full border border-[#ebebeb] rounded-md p-2"
-              />
-              {errors.name && (
-                <p className="text-red-500">{errors.name.message}</p>
-              )}
+            <div className="flex flex-wrap -mx-2">
+              <div className="w-full md:w-1/2 px-2 mb-4">
+                <label htmlFor="name" className="block mb-1">
+                  Name
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  {...register("name", { required: "Name is required" })}
+                  className="w-full border border-[#ebebeb] rounded-md p-2"
+                />
+                {errors.name && (
+                  <p className="text-red-500">{errors.name.message}</p>
+                )}
+              </div>
+              <div className="w-full md:w-1/2 px-2 mb-4">
+                <label htmlFor="phone" className="block mb-1">
+                  Phone Number
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  {...register("phone", {
+                    required: "Phone number is required",
+                  })}
+                  className="w-full border border-[#ebebeb] rounded-md p-2"
+                />
+                {errors.phone && (
+                  <p className="text-red-500">{errors.phone.message}</p>
+                )}
+              </div>
             </div>
+
             <div className="mb-4">
               <label htmlFor="email" className="block mb-1">
                 Email
@@ -135,7 +156,7 @@ const Section2 = () => {
               <textarea
                 id="message"
                 {...register("message")}
-                className="w-full border border-[#ebebeb] rounded-md p-2"
+                className="w-full h-40 border border-[#ebebeb] rounded-md p-2"
               ></textarea>
             </div>
             <button
