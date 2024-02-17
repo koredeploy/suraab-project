@@ -9,7 +9,7 @@ import ContactUs from "../../layout/components/contactus/ContactUs"
 
 const AboutPage = () => {
   return (
-    <div>
+    <div style={{maxWidth: '1600px', margin: "auto"}}>
       <Hero arrow_img={arrow_img}/>
       <Mission />
       <WhySection />
