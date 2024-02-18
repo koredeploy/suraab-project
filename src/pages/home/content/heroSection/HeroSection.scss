@@ -2,4 +2,8 @@
 
 .responsive{
     @include mixins.responsive;
+    .hero-positioning{
+        position: relative;
+    }
+    
 }
