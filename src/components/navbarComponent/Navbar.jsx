@@ -18,16 +18,16 @@ const Navbar = () => {
         style={{ maxWidth: "1440px", margin: "auto" }}
         className="relative w-11/12 text-white-100 flex justify-between items-center py-6 "
       >
-        <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full items-center">
+        <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full items-center z-50">
           <Link to="/">
             <img
               src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png"
               alt=""
-              className="rounded-sm"
+              className="rounded-sm  w-4/5 lg:w-full"
             />
           </Link>
-          <div className="lg:hidden block" onClick={() => setShow(!show)}>
-            <Hamburger color="red" />
+          <div className="lg:hidden block" onClick={() => setShow(!show)} >
+            <Hamburger color="red"  />
           </div>
         </div>
 
@@ -37,7 +37,7 @@ const Navbar = () => {
           } lg:flex items-center justify-between w-3/4 hidden border-0 lg:border-0 border-t-2 border-stone-700`}
         >
           <nav>
-            <ul className="flex lg:flex-row flex-col gap-16 text-white ">
+            <ul className="flex lg:flex-row flex-col gap-16 text-white justify-center items-center ">
               <li>
                 <Link
                   to="/"
@@ -77,7 +77,7 @@ const Navbar = () => {
             </ul>
           </nav>
           {/* <Link> */}{" "}
-          <div className="py-10">
+          <div className="py-10 flex justify-center items-center lg:justify-normal items-start">
             <ContactBtn />
           </div>
         </div>
