@@ -35,14 +35,16 @@ nav a::after {
       background-color: rgba(0, 0, 0, 0.926) !important;
       position: fixed;
       padding: 2rem;
+      margin: 0;
+      box-sizing: border-box;
       border: none;
-      width: 40% !important;
-      height: calc(100vh - 50px) !important;
-      right: 0 !important;
-      top: 108px;
+      width: 100% !important;
+      height: calc(100vh - 100px);
+      left: 0 !important;
+      top: 0;
       animation: spin 0.4s ease-in-out;
       transition: all 0.5s ease-in-out;
-      z-index: 10;
+      z-index: 40;
     
   }
 
@@ -63,6 +65,9 @@ nav a::after {
 
 @media screen and (max-width: 600px) {
   header .menu {
-    width: 75% !important;
+    padding-top: 7rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }
