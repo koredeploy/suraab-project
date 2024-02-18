@@ -7,9 +7,9 @@ const Footer = () => {
   return (
     <div className=' bg-black-200 text-white-100 py-10'>
         <div className='grid lg:grid-cols-3 grid-cols-1 p-6 lg:pb-14 gap-8 lg:place-items-center' style={{ maxWidth: "1440px", margin: "auto" }}>
-            <div className='flex flex-col gap-5 items-start'>
-                <Link to="/"><img src= {suraab_logo} alt="" /></Link>
-                <p className=' max-w-96'>Join me as I share timeless secrets on how to build your own academy that generates millions monthly.</p>
+            <div className='flex flex-col gap-5 md:items-start items-center'>
+                <Link to="/"><img src= {suraab_logo} alt="" className="rounded-sm" /></Link>
+                <p className=' max-w-96 md:text-left text-center'>Join me as I share timeless secrets on how to build your own academy that generates millions monthly.</p>
                 <div>
                 <ContactBtn />
                 </div>

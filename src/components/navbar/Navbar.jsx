@@ -13,13 +13,13 @@ const Navbar = () => {
     <div className="bg-black-500 bg-opacity-30 fixed top-0 w-full">
       <header style={{ maxWidth: "1440px", margin: "auto" }} className="relative text-white-100 flex justify-between items-center py-6 px-6">
         <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full">
-        <Link to="/"><img src= {suraab_logo} alt="" className="rounded-sm" /></Link>
-        <div className="lg:hidden block" onClick={() => setShow(!show)}><Hamburger color="red"/></div>
+        <Link to="/"><img src= {suraab_logo} alt="" className="rounded-sm md:w-auto w-10" /></Link>
+        <div className="lg:hidden block" onClick={() => setShow(!show)}><Hamburger color="red" size={24}/></div>
         </div>
 
-      <div className={`${show && "menu"} lg:flex items-center justify-between w-3/4 hidden lg:border-0 border-t-2 bg-black-500 bg-opacity-50 lg:bg-opacity-0`}>
+      <div className={`${show && "menu"} lg:flex lg:flex-row flex-col items-center justify-between w-3/4 hidden bg-black-500 bg-opacity-30 lg:bg-opacity-0`}>
         <nav>
-          <ul className="flex lg:flex-row flex-col gap-16 text-white">
+          <ul className="flex lg:flex-row items-center flex-col gap-16 text-white">
             <li>  
               <Link to="/" className= {`${location.pathname === "/" && "active"} relative`}>Home</Link>
             </li>
@@ -39,7 +39,7 @@ const Navbar = () => {
 
         {/* <Link> */}
           {" "}
-          <div className="mt-3 ">
+          <div className=" mt-3">
           <ContactBtn />
           </div>
 

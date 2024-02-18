@@ -37,36 +37,15 @@ nav {
 @media screen and (max-width: 976px) {
   header {
     .menu {
-      display: block !important;
-      position: fixed;
+      display: flex !important;
+      position: absolute !important;
       padding: fn.rem(16);
-      width: 40% !important;
-      height: 100vh !important;
+      width: 100% !important;
       right: 0 !important;
-      top: fn.rem(108);
-      z-index: -1 !important;
-      animation: spin 0.4s ease-in-out;
+      top: 100%;
       transition: all 0.5s ease-in-out;
       
     }
+  
   }
-  @keyframes spin {
-    from {
-      transform: rotateY(90deg) skew(3deg);
-      perspective: fn.rem(1000);
-      opacity: 0.4;
-    }
-
-    to {
-      perspective: fn.rem(-1000);
-      transform: rotateY(0) skew(0);
-      opacity: 1;
-    }
-  }
-}
-
-@media screen and (max-width: 600px) {
-  header {.menu {
-    width: 75% !important;
-  }}
 }
