@@ -1,4 +1,5 @@
 import ContactBtn from '../ContactBtn/ContactBtn'
+import {Link} from 'react-router-dom'
 import './Footer.scss'
 
 
@@ -7,17 +8,25 @@ const Footer = () => {
     <div className=' bg-black-200 text-white-100 py-10'>
         <div className='grid lg:grid-cols-3 grid-cols-1 py-6 gap-8 w-11/12' style={{ maxWidth: "1440px", margin: "auto" }}>
             <div className='flex flex-col gap-5 items-start'>
-                <img src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png" alt="" />
+                <Link to="/" ><img src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png" alt="" /></Link>
                 <p className='text-center lg:text-start'>Join me as I share timeless secrets on how to build your own academy that generates millions monthly.</p>
                 <ContactBtn />
             </div>
             <div className='flex flex-col lg:ps-20 gap-5 items-start'>
                 <h2 className='text-2xl font-semibold'>Quick Links</h2>
                 <ul className='flex flex-col gap-3'>
-                    <li>Home</li>
-                    <li>About Us</li>
-                    <li>Services</li>
-                    <li>Contact Us</li>
+                    <li>
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/aboutus">About Us</Link>
+                    </li>
+                    <li>
+                    <Link to="/service" >Service</Link>
+                    </li>
+                    <li>
+                    <Link to="/contactus"> Contact Us </Link>
+                    </li>
                 </ul>
             </div>
             <div className='flex flex-col gap-3 items-start'>

@@ -16,7 +16,9 @@ const Navbar = () => {
     <div className="bg-black bg-opacity-70 top-0 w-full">
       <header style={{ maxWidth: "1440px", margin: "auto" }} className="relative w-11/12 text-white-100 flex justify-between items-center py-6 ">
         <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full items-center">
+        <Link to="/">
         <img src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png" alt="" className="rounded-sm" />
+        </Link>
         <div className="lg:hidden block" onClick={() => setShow(!show)}><Hamburger color="red"/></div>
         </div>
 

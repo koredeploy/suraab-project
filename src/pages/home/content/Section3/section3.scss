@@ -8,9 +8,11 @@
   .responsive{
     @include mixins.responsive;
 
-    .img-box{
-      max-width: fn.rem(363);
-      margin: auto;
+    @media(width > 1024px){
+      .img-box{
+        max-width: fn.rem(363);
+        margin: auto;
+      }
     }
   }
 
