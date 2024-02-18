@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 import { useLocation } from "react-router-dom";
 import "./Section2.scss";
 import loc from "../../../../assets/location.png";
@@ -8,32 +9,42 @@ import { useForm } from "react-hook-form";
 
 const Section2 = () => {
   const location = useLocation();
-  const [formSubmitted, setFormSubmitted] = useState(false); // State to track form submission
+  const [formSubmitted, setFormSubmitted] = useState(false);
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
     setValue,
-  } = useForm(); // Destructure useForm
+  } = useForm();
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
     const emailParam = searchParams.get("email");
     if (emailParam) {
-      setValue("email", emailParam); // Set email value using setValue
+      setValue("email", emailParam);
     }
-  }, [location.search, setValue]); // Add setValue as a dependency
+  }, [location.search, setValue]);
 
   const onSubmit = (data) => {
-    // Handle form submission (send email, save to Excel sheet, etc.)
+    setFormSubmitted(true);
+    axios
+      .post(
+        "https://sheet.best/api/sheets/2df899bb-c256-4421-b338-bddb6cdfc4b7",
+        {
+          Name: data.name,
+          "Phone Number": data.phone,
+          Email: data.email,
+          Subject: data.subject,
+          "Your Message": data.message, // Adjust field name here
+        }
+      )
+      .then(() => {
+        setFormSubmitted(false);
+        reset();
+      })
+      .catch((error) => console.error("Error submitting form:", error));
     console.log(data);
-    setFormSubmitted(true); // Set form submission state to true
-    setTimeout(() => {
-      setFormSubmitted(false); // Reset form submission state after 2 seconds
-      reset(); // Reset form data
-      window.location.href = "/contactus";
-    }, 2000);
   };
 
   return (
@@ -95,13 +106,13 @@ const Section2 = () => {
                   Name
                 </label>
                 <input
-                  id="name"
+                  name="name"
                   type="text"
                   {...register("name", { required: "Name is required" })}
                   className="w-full border border-[#ebebeb] rounded-md p-2"
                 />
                 {errors.name && (
-                  <p className="text-red-500">{errors.name.message}</p>
+                  <p className="text-red-400">{errors.name.message}</p>
                 )}
               </div>
               <div className="w-full md:w-1/2 px-2 mb-4">
@@ -109,7 +120,7 @@ const Section2 = () => {
                   Phone Number
                 </label>
                 <input
-                  id="phone"
+                  name="phone"
                   type="tel"
                   {...register("phone", {
                     required: "Phone number is required",
@@ -117,7 +128,7 @@ const Section2 = () => {
                   className="w-full border border-[#ebebeb] rounded-md p-2"
                 />
                 {errors.phone && (
-                  <p className="text-red-500">{errors.phone.message}</p>
+                  <p className="text-red-400">{errors.phone.message}</p>
                 )}
               </div>
             </div>
@@ -127,7 +138,7 @@ const Section2 = () => {
                 Email
               </label>
               <input
-                id="email"
+                name="email"
                 type="email"
                 {...register("email", {
                   required: "Email is required",
@@ -139,7 +150,7 @@ const Section2 = () => {
                 className="w-full border border-[#ebebeb] rounded-md p-2"
               />
               {errors.email && (
-                <p className="text-red-500">{errors.email.message}</p>
+                <p className="text-red-400">{errors.email.message}</p>
               )}
             </div>
             <div className="mb-4">
@@ -147,7 +158,7 @@ const Section2 = () => {
                 Subject
               </label>
               <input
-                id="subject"
+                name="subject"
                 type="text"
                 {...register("subject")}
                 className="w-full border border-[#ebebeb] rounded-md p-2"
@@ -158,7 +169,7 @@ const Section2 = () => {
                 Your Message
               </label>
               <textarea
-                id="message"
+                name="message"
                 {...register("message")}
                 className="w-full h-40 border border-[#ebebeb] rounded-md p-2"
               ></textarea>
@@ -167,11 +178,10 @@ const Section2 = () => {
               type="submit"
               className={`bg-red-400 text-white-100 py-2 px-4  hover:bg-black-600 transition duration-300 ${
                 formSubmitted ? "opacity-50 cursor-not-allowed" : ""
-              }`} // Add conditional styling based on formSubmitted state
-              disabled={formSubmitted} // Disable button when form is submitted
+              }`}
+              disabled={formSubmitted}
             >
-              {formSubmitted ? "Submitting..." : "Submit Now"}{" "}
-              {/* Change button text based on formSubmitted state */}
+              {formSubmitted ? "Submitting..." : "Submit Now"}
             </button>
           </form>
         </div>
