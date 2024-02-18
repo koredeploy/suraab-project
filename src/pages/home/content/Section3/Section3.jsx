@@ -1,4 +1,4 @@
-import React from 'react'
+
 import './section3.scss'
 import trouble_shooting from '../../../../assets/trouble-shooting.png'
 import lightning from '../../../../assets/lightning.png'
