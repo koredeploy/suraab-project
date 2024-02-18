@@ -1,15 +1,31 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 import ContactBtn from "../ContactBtn/ContactBtn";
 import { Sling as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
-  const [isActive, SetISActive] = useState(0);
+  const [isActive, setActive] = useState(0);
+  const location = useLocation();
+
+  useEffect(() => {
+    // Extract the pathname from the location object
+    const { pathname } = location;
+    // Update the active state based on the pathname
+    if (pathname === "/") {
+      setActive(0);
+    } else if (pathname === "/aboutus") {
+      setActive(1);
+    } else if (pathname === "/service") {
+      setActive(2);
+    } else if (pathname === "/contactus") {
+      setActive(3);
+    }
+  }, [location]);
 
   const handleClick = (index) => {
-    SetISActive(index);
+    setActive(index);
   };
 
   return (
@@ -26,8 +42,8 @@ const Navbar = () => {
               className="rounded-sm  w-4/5 lg:w-full"
             />
           </Link>
-          <div className="lg:hidden block" onClick={() => setShow(!show)} >
-            <Hamburger color="red"  />
+          <div className="lg:hidden block" onClick={() => setShow(!show)}>
+            <Hamburger color="red" />
           </div>
         </div>
 
