@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.6.7",
     "google-map-react": "^2.2.1",
     "hamburger-menu": "^0.6.1",
     "hamburger-react": "^2.5.0",
