@@ -44,7 +44,7 @@ const ContactUs = () => {
                     message: "Invalid email address",
                   },
                 })}
-                className="p-3 w-full text-black-500 py-5"
+                className="p-3 w-full text-black-500 py-5 rounded-none"
                 placeholder="Your Email"
                 onChange={(e) => setEmail(e.target.value)}
               />
