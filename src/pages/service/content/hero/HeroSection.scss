@@ -1,12 +1,11 @@
 @use "../../../../scss/style.scss";
 // @use "../../scss/utils/functions" as fn;
 
-
-.service-bg{
-    background-image: url(../../../../assets/service_page_bg.png);
-    background-repeat: no-repeat;
-    object-fit: cover;
-    background-size: cover;
-    height: 50vh;
-    background-position:center;
+.service-bg {
+  background-image: url(../../../../assets/about_us_bg.png);
+  background-repeat: no-repeat;
+  object-fit: cover;
+  background-size: cover;
+  height: 50vh;
+  background-position: center;
 }
