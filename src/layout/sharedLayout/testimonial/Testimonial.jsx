@@ -19,7 +19,7 @@ const Testimonial = () => {
               nec. Purus rhoncus vel id tortor nulla dictum duis at vestibulum.
               Id bibendum dictum nunc et volutpat a tellus ut nascetur. Volutpat
               nunc porta vestibulum ipsum et enim ac pharetra pellentesque.
-              Vivamus diam enim commodo.
+              Vivamus diam enim commodoi.
             </p>
           
             <div className='flex justify-center items-center gap-4 py-4'>
