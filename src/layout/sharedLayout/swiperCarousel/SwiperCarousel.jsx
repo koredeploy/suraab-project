@@ -14,9 +14,9 @@ import panorama from '../../../assets/paranoma.png'
 
 const SwiperCarousel = () => {
   return (
-    <div className='py-10 relative'>
-        <img src={panorama} alt="" className='absolute top-1 z-40' />
-        <img src={panorama} alt="" className='absolute bottom-1 z-40' />
+    <div className='py-10 relative flex justify-center items-center'>
+        <img src={panorama} alt="" className='absolute top-1 z-40 w-full' />
+        <img src={panorama} alt="" className='absolute bottom-1 z-40 w-full' />
 
         <Swiper 
         // slidesPerView={3}
