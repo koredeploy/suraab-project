@@ -42,6 +42,7 @@ const Section2 = () => {
       .then(() => {
         setFormSubmitted(false);
         reset();
+        window.location.href = "/contactus";
       })
       .catch((error) => console.error("Error submitting form:", error));
     console.log(data);
