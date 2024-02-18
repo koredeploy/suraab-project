@@ -4,18 +4,21 @@ import './HeroSection.scss'
 const HeroSection = () => {
   return (
     <div>
-       <div className='responsive w-11/12 '>
-       <div className='absolute top-5 flex justify-center lg:justify-start pt-8 '>
-           <div className='w-full lg:w-1/2  py-10'>
-           <h1 className='large-text text-white-100 text-center lg:text-start'><span className='text-red-400 large-text text-center lg:text-start'>Illuminate</span> Your Home With Suraab Electrical Services</h1>
-           <p className='py-5 medium-text text-white-100 text-center lg:text-start'>At Suraab, we go beyond the wires and circuits – we empower homes with solutions that prioritize efficiency, reliability, and your peace of mind.</p>
+       <div className='responsive w-11/12 mx-auto flex justify-center items-center'>
+       <div className='absolute top-5 left-0 right-0 flex justify-center items-center lg:justify-start py-7 lg:py-10 lg:top-10 2xl:top-40'>
+          <div className='w-11/12 mx-auto'>
+          <div className= 'w-full lg:w-3/5 xl:w-1/2 mx-auto lg:mx-0  py-10'>
+           <h1 className='large-text text-white-100 text-center lg:text-start 2xl:text-4xl'><span className='text-red-400 large-text text-center lg:text-start large-text 2xl:text-4xl'>Illuminate</span> Your Home With Suraab Electrical Services</h1>
+           <p className='py-5 medium-text text-white-100 text-center lg:text-start 2xl:text-3xl 2xl:leading-[4rem]'>At Suraab, we go beyond the wires and circuits – we empower homes with solutions that prioritize efficiency, reliability, and your peace of mind.</p>
            <div className='flex justify-center lg:justify-start items-center lg:items-start'>
            <ContactBtn/>
            </div>
            </div>
+          </div>
            <div>
            </div>
         </div>
+
        </div>
     </div>
   )

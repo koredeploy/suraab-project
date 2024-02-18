@@ -12,7 +12,7 @@ const HomePage = () => {
   return (
     <div className=' relative'>
       <FadedCarousel/>
-      <HeroSection/>
+        <HeroSection/>
       <Section2/>
       <Section3/>
       <WhySection/>
