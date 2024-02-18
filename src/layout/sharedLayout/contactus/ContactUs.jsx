@@ -32,9 +32,9 @@ const ContactUs = () => {
         <div>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex py-5 justify-center"
+            className="flex py-5 justify-center w-5/6 mx-auto "
           >
-            <div className="relative w-1/2">
+            <div className="relative w-1/2 ">
               <input
                 type="email"
                 {...register("email", {
@@ -44,7 +44,7 @@ const ContactUs = () => {
                     message: "Invalid email address",
                   },
                 })}
-                className="p-3 w-full text-black-500"
+                className="p-3 w-full text-black-500 py-5"
                 placeholder="Your Email"
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -55,7 +55,7 @@ const ContactUs = () => {
                 </div>
               )}
             </div>
-            <button type="submit" className="bg-red-400 p-3">
+            <button type="submit" className="bg-red-400 px-20  py-5">
               Contact us
             </button>
           </form>
