@@ -29,12 +29,12 @@ const ContactUs = () => {
           illuminating homes and lives with a commitment to safety, reliability,
           and innovation. We embark on this mission
         </p>
-        <div>
+        <div className="w-full mx-auto lg:w-3/4">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex py-5 justify-center w-5/6 mx-auto "
+            className=" py-5  w-full flex justify-center items-center "
           >
-            <div className="relative w-1/2 ">
+            <div className="relative w-full ">
               <input
                 type="email"
                 {...register("email", {
@@ -55,7 +55,7 @@ const ContactUs = () => {
                 </div>
               )}
             </div>
-            <button type="submit" className="bg-red-400 px-20  py-5">
+            <button type="submit" className="w-5/12 bg-red-400 px-5 lg:px-20  py-5">
               Contact us
             </button>
           </form>
