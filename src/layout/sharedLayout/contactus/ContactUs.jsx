@@ -13,9 +13,12 @@ const ContactUs = () => {
   const navigate = useNavigate(); // Initialize useNavigate hook
 
   const onSubmit = () => {
+    // Scroll to the top of the page
+    window.scrollTo(0, 0);
+
     // Redirect to the contact form page with the email address as a query parameter
     const encodedEmail = encodeURIComponent(email);
-    navigate(`/contactus?email=${encodedEmail}`); // Use navigate instead of window.location.href
+    navigate(`/contactus?email=${encodedEmail}`);
   };
 
   return (
@@ -32,9 +35,9 @@ const ContactUs = () => {
         <div className="w-full mx-auto lg:w-3/4">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className=" py-5  w-full flex justify-center items-center "
+            className="py-5 w-full flex justify-center items-center"
           >
-            <div className="relative w-full ">
+            <div className="relative w-full">
               <input
                 type="email"
                 {...register("email", {
@@ -55,7 +58,10 @@ const ContactUs = () => {
                 </div>
               )}
             </div>
-            <button type="submit" className="w-5/12 bg-red-400 px-5 lg:px-20  py-5">
+            <button
+              type="submit"
+              className="w-5/12 bg-red-400 px-5 lg:px-20 py-5"
+            >
               Contact us
             </button>
           </form>
