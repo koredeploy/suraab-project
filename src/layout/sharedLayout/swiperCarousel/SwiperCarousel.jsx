@@ -8,13 +8,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import slide1 from '../../../assets/slide1.png'
 import slide2 from '../../../assets/slide2.png'
-// import slide3 from '../../../assets/slide3.png'
+import slidethree from '../../../assets/slide3.png'
+import panorama from '../../../assets/paranoma.png'
 
 
 const SwiperCarousel = () => {
   return (
-    <div>
-        <Swiper
+    <div className='py-10 relative'>
+        <img src={panorama} alt="" className='absolute top-1 z-40' />
+        <img src={panorama} alt="" className='absolute bottom-1 z-40' />
+
+        <Swiper 
         // slidesPerView={3}
         // spaceBetween={30}
         // pagination={{
@@ -42,14 +46,19 @@ const SwiperCarousel = () => {
         <SwiperSlide>
         <img src={slide2} alt="" />
         </SwiperSlide>
-        {/* <SwiperSlide>{slide3}</SwiperSlide> */}
+        <SwiperSlide>
+        <img src={slidethree} alt="" />
+        </SwiperSlide>
         <SwiperSlide>
         <img src={slide1} alt="" />
         </SwiperSlide>
         <SwiperSlide>
         <img src={slide2} alt="" />
         </SwiperSlide>
-        {/* <SwiperSlide>{slide3}</SwiperSlide> */}
+        <SwiperSlide>
+        <img src={slidethree} alt="" />
+        </SwiperSlide>
+       
      
 
       </Swiper>
