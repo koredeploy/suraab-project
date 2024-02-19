@@ -189,6 +189,13 @@ span {
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;
-  height: 50vh;
+  height: auto;
+  min-height: 18.75rem;
   background-position: center;
+}
+
+@media (width > 700px) {
+  .service-bg {
+    min-height: 27.25rem;
+  }
 }/*# sourceMappingURL=HeroSection.css.map */

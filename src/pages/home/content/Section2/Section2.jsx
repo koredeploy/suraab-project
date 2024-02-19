@@ -3,7 +3,7 @@ import './Section2.scss'
 import engineer from '../../../../assets/engineer.png'
 const Section2 = () => {
   return (
-    <div className='bg-white-100 py-6 xl:pb-10 xl:pt-5'>
+    <div className='bg-white-100 py-6 xl:pb-10 xl:pt-5 relative'>
         <div className='responsive w-11/12 mx-auto py-14'>
             <div className='grid grid-cols-1 lg:grid-cols-2 justify-center items-center relative  xl:pb-9 xl:pt-5 '>
                 <div className='relative '>
