@@ -46,7 +46,7 @@ const Navbar = () => {
               className="rounded-sm"
             />
           </Link>
-          <div className="lg:hidden block fixed top-6 pr-5 z-50 pt-3 right-0 " onClick={showHamburger}>
+          <div className="lg:hidden block fixed top-6 pr-4 z-50 pt-2 right-0 " onClick={showHamburger}>
             <Hamburger color="red" />
           </div>
         </div>
