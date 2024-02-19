@@ -25,7 +25,7 @@ const ContactUs = () => {
     <div className="contact-background flex flex-col items-center justify-center">
       <div className="text-white-100 py-10 text-center w-11/12 mx-auto grid grid-cols-1 gap-7 responsive">
         <h1 className="text-white-100 large-text ">
-          Ready to Book Your First Service
+          Ready to Book Your First <br /> Service
         </h1>
         <p className="w-full lg:w-3/5 mx-auto medium-text ">
           Our mission is to redefine excellence in electrical solutions,
