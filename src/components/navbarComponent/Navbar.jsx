@@ -8,10 +8,17 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
   const [isActive, SetISActive] = useState(0);
 
+  // const[active, setActive] = useState(false)
+  // console.log(active);
   const handleClick = (index) => {
     SetISActive(index);
-    setShow(!show)
+
   };
+
+
+  const showHamburger =()=>{
+    setShow(!show)
+  }
 
   
 
@@ -29,7 +36,7 @@ const Navbar = () => {
               className="rounded-sm"
             />
           </Link>
-          <div className="lg:hidden block z-50 " onClick={() => setShow(!show)}>
+          <div className="lg:hidden block z-50 " onClick={showHamburger}>
             <Hamburger color="red" />
           </div>
         </div>
