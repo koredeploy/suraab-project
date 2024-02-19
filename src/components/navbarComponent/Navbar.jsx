@@ -10,15 +10,16 @@ const Navbar = () => {
 
   const handleClick = (index) => {
     SetISActive(index);
+    setShow(false)
   };
 
   return (
-    <div className="bg-black bg-opacity-70 top-0 w-full">
+    <div className="bg-black bg-opacity-70 top-0 w-full ">
       <header
         style={{ maxWidth: "1440px", margin: "auto" }}
-        className="relative w-11/12 text-white-100 flex justify-between items-center py-6 "
+        className="relative w-11/12 text-white-100 flex justify-between items-center  "
       >
-        <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full items-center ">
+        <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full items-center py-7 ">
           <Link to="/">
             <img
               src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png"
@@ -26,7 +27,7 @@ const Navbar = () => {
               className="rounded-sm"
             />
           </Link>
-          <div className="lg:hidden block z-50" onClick={() => setShow(!show)}>
+          <div className="lg:hidden block z-50 " onClick={() => setShow(!show)}>
             <Hamburger color="red" />
           </div>
         </div>
@@ -50,7 +51,8 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/aboutus"
-                  onClick={() => handleClick(1)}
+                  onClick={() => handleClick(1)
+                  }
                   className={`${isActive === 1 && "active"} relative`}
                 >
                   About
