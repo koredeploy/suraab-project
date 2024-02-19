@@ -9,8 +9,7 @@ const OurMission = () => {
     <div className='responsive'>
              <div className=" grid grid-cols-1 lg:grid-cols-2 gap-7 lg:gap-20 items-center w-11/12 mx-auto mission py-16 ">
              <img src={elect2} className=' block lg:hidden w-full' alt="" />
-            <div className='flex flex-row gap-10 items-center justify-center '>
-               
+            <div className='flex flex-row  gap-10 items-center justify-center '>
                 <div>
                     <img className='hidden lg:block rounded-xl w-full' src={elect1} alt="" />
                 </div>
