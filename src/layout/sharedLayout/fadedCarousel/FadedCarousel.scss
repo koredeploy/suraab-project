@@ -65,14 +65,14 @@
 
 @media(width < 700px){
   .carousel{
-    min-height: fn.rem(430);
-    max-height: fn.rem(430);
-  }
+    min-height: fn.rem(400);
+    max-height: fn.rem(400);
+ }
   .carousel_wrapper{
-    min-height: fn.rem(430);
-  }
+    min-height: fn.rem(400);
+ }
   .carousel_card{
-    min-height: fn.rem(430);
-  max-height: fn.rem(430);
+    min-height: fn.rem(400);
+  max-height: fn.rem(400);
   }
 }
