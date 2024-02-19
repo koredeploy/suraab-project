@@ -9,6 +9,7 @@ import HomePage from "./pages/home/HomePage";
 import ServicePage from "./pages/service/ServicePage";
 import ContactUsPage from "./pages/contact/ContactUsPage";
 import AboutPage from "./pages/about/AboutPage";
+import ErrorPage from "./pages/404/ErrorPage";
 // import FadedCarousel from "./layout/sharedLayout/fadedCarousel/FadedCarousel";
 
 const router = createBrowserRouter(
@@ -19,8 +20,9 @@ const router = createBrowserRouter(
       <Route path="/service" element={<ServicePage />} />
       {/* <Route path="/carousel" element={<FadedCarousel  />} /> */}
       <Route path="/contactus" element={<ContactUsPage />} />
-      <Route path="*" element={<HomePage />} />
     </Route>
+
+
   )
 );
 function App() {
