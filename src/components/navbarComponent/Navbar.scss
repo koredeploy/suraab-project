@@ -39,7 +39,7 @@ nav a::after {
       box-sizing: border-box;
       border: none;
       width: 100% !important;
-      height: calc(100vh - 100px);
+      height: calc(100vh - 200px);
       left: 0 !important;
       top: 0;
       animation: spin 0.4s ease-in-out;
@@ -65,7 +65,8 @@ nav a::after {
 
 @media screen and (max-width: 600px) {
   header .menu {
-    padding-top: 7rem;
+    padding-top: 2.5rem;
+    padding-left: 2.5rem;
     width: 100%;
     justify-content: center;
     align-items: center;
