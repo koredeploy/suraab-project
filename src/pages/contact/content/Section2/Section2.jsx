@@ -94,7 +94,7 @@ const Section2 = ({ setOpen }) => {
               <span>
                 <h5 className="text-black-100">Location</h5>
                 <h2 className="text-black-500 medium-text">
-                  158, Ikotun - Idimu Road, Nobex Bus <br />
+                  158, Ikotun - Idimu Road, Nobex <br /> Bus
                   Stop, Idimu, Lagos
                 </h2>
               </span>
@@ -128,7 +128,7 @@ const Section2 = ({ setOpen }) => {
           <p className="text-black-100 mb-4">Drop us a message</p>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div className="flex flex-wrap -mx-2">
-              <div className="w-full md:w-1/2 px-2 mb-4">
+              <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
                 <label htmlFor="name" className="block mb-1">
                   Name
                 </label>
@@ -142,7 +142,7 @@ const Section2 = ({ setOpen }) => {
                   <p className="text-red-500">{errors.name.message}</p>
                 )}
               </div>
-              <div className="w-full md:w-1/2 px-2 mb-4">
+              <div className="w-full md:w-1/2 px-2 mb-4 md:mb-0">
                 <label htmlFor="phone" className="block mb-1">
                   Phone Number
                 </label>
