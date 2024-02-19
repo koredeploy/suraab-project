@@ -50,6 +50,7 @@ const Section2 = () => {
       );
 
       // Send data to backend API
+      //Sending Data to mail
       await axios.post(
         "https://contact-form-api-xntq.onrender.com/api/v1/mailing",
         {
