@@ -33,7 +33,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-black fixed z-50 bg-opacity-70 top-0 w-full ">
+    <div className="bg-black-500 fixed z-50 bg-opacity-30 top-0 w-full ">
       <header
         style={{ maxWidth: "1440px", margin: "auto" }}
         className="relative w-11/12 text-white-100 flex justify-between items-center  "
