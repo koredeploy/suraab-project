@@ -88,7 +88,7 @@ const Navbar = () => {
             </ul>
           </nav>
           {/* <Link> */}{" "}
-          <div className="pt-12">
+          <div className="">
             <ContactBtn />
           </div>
         </div>
