@@ -57,7 +57,7 @@ const Navbar = () => {
           } lg:flex items-center justify-between w-3/4 hidden border-0 lg:border-0 border-t-2 border-stone-700`}
         >
           <nav>
-            <ul className="flex lg:flex-row flex-col gap-12 text-white pb-12 ">
+            <ul className="flex lg:flex-row flex-col gap-12 text-white pb-0 lg:pb-12 ">
               <li>
                 <Link
                   to="/"
