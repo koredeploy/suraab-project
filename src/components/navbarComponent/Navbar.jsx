@@ -1,48 +1,32 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import ContactBtn from "../ContactBtn/ContactBtn";
 import { Sling as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
-  const [isActive, setActive] = useState(0);
-  const location = useLocation();
-
-  useEffect(() => {
-    // Extract the pathname from the location object
-    const { pathname } = location;
-    // Update the active state based on the pathname
-    if (pathname === "/") {
-      setActive(0);
-    } else if (pathname === "/aboutus") {
-      setActive(1);
-    } else if (pathname === "/service") {
-      setActive(2);
-    } else if (pathname === "/contactus") {
-      setActive(3);
-    }
-  }, [location]);
+  const [isActive, SetISActive] = useState(0);
 
   const handleClick = (index) => {
-    setActive(index);
+    SetISActive(index);
   };
 
   return (
     <div className="bg-black bg-opacity-70 top-0 w-full">
       <header
         style={{ maxWidth: "1440px", margin: "auto" }}
-        className="relative w-11/12 text-white-100 flex justify-between items-center zzpy-6 "
+        className="relative w-11/12 text-white-100 flex justify-between items-center py-6 "
       >
-        <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full items-center z-50">
+        <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full items-center ">
           <Link to="/">
             <img
               src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png"
               alt=""
-              className="rounded-sm  w-4/5 lg:w-full"
+              className="rounded-sm"
             />
           </Link>
-          <div className="lg:hidden block" onClick={() => setShow(!show)}>
+          <div className="lg:hidden block z-50" onClick={() => setShow(!show)}>
             <Hamburger color="red" />
           </div>
         </div>
@@ -53,7 +37,7 @@ const Navbar = () => {
           } lg:flex items-center justify-between w-3/4 hidden border-0 lg:border-0 border-t-2 border-stone-700`}
         >
           <nav>
-            <ul className="flex lg:flex-row flex-col gap-16 text-white justify-center items-center ">
+            <ul className="flex lg:flex-row flex-col gap-16 text-white ">
               <li>
                 <Link
                   to="/"
@@ -93,7 +77,7 @@ const Navbar = () => {
             </ul>
           </nav>
           {/* <Link> */}{" "}
-          <div className="py-10 flex justify-center items-center lg:justify-normal items-start">
+          <div className="py-10">
             <ContactBtn />
           </div>
         </div>
