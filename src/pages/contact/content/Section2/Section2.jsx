@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Section2.scss";
 import loc from "../../../../assets/location.png";
 import phone from "../../../../assets/phoneNumber.png";
@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 
 const Section2 = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [formSubmitted, setFormSubmitted] = useState(false);
   const {
     register,
@@ -26,26 +27,48 @@ const Section2 = () => {
     }
   }, [location.search, setValue]);
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     setFormSubmitted(true);
-    axios
-      .post(
+    try {
+      if (!data.subject) {
+        throw new Error("Subject is required");
+      }
+      if (!data.message) {
+        throw new Error("Message is required");
+      }
+
+      // Send data to Google Sheets
+      await axios.post(
         "https://sheet.best/api/sheets/2df899bb-c256-4421-b338-bddb6cdfc4b7",
         {
           Name: data.name,
           "Phone Number": data.phone,
           Email: data.email,
           Subject: data.subject,
-          "Your Message": data.message, // Adjust field name here
+          "Your Message": data.message,
         }
-      )
-      .then(() => {
-        setFormSubmitted(false);
-        reset();
-        window.location.href = "/contactus";
-      })
-      .catch((error) => console.error("Error submitting form:", error));
-    console.log(data);
+      );
+
+      // Send data to backend API
+      await axios.post(
+        "https://contact-form-api-xntq.onrender.com/api/v1/mailing",
+        {
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        }
+      );
+
+      setFormSubmitted(false);
+      reset();
+      navigate("/contactus", { replace: true });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setFormSubmitted(false);
+      // Handle error state
+    }
   };
 
   return (
@@ -113,7 +136,7 @@ const Section2 = () => {
                   className="w-full border border-[#ebebeb] rounded-md p-2"
                 />
                 {errors.name && (
-                  <p className="text-red-400">{errors.name.message}</p>
+                  <p className="text-red-500">{errors.name.message}</p>
                 )}
               </div>
               <div className="w-full md:w-1/2 px-2 mb-4">
@@ -129,7 +152,7 @@ const Section2 = () => {
                   className="w-full border border-[#ebebeb] rounded-md p-2"
                 />
                 {errors.phone && (
-                  <p className="text-red-400">{errors.phone.message}</p>
+                  <p className="text-red-500">{errors.phone.message}</p>
                 )}
               </div>
             </div>
@@ -151,7 +174,7 @@ const Section2 = () => {
                 className="w-full border border-[#ebebeb] rounded-md p-2"
               />
               {errors.email && (
-                <p className="text-red-400">{errors.email.message}</p>
+                <p className="text-red-500">{errors.email.message}</p>
               )}
             </div>
             <div className="mb-4">
@@ -161,9 +184,12 @@ const Section2 = () => {
               <input
                 name="subject"
                 type="text"
-                {...register("subject")}
+                {...register("subject", { required: "Subject is required" })}
                 className="w-full border border-[#ebebeb] rounded-md p-2"
               />
+              {errors.subject && (
+                <p className="text-red-500">{errors.subject.message}</p>
+              )}
             </div>
             <div className="mb-4">
               <label htmlFor="message" className="block mb-1">
@@ -171,9 +197,12 @@ const Section2 = () => {
               </label>
               <textarea
                 name="message"
-                {...register("message")}
+                {...register("message", { required: "Message is required" })}
                 className="w-full h-40 border border-[#ebebeb] rounded-md p-2"
               ></textarea>
+              {errors.message && (
+                <p className="text-red-500">{errors.message.message}</p>
+              )}
             </div>
             <button
               type="submit"
