@@ -1,26 +1,36 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 import ContactBtn from "../ContactBtn/ContactBtn";
 import { Sling as Hamburger } from "hamburger-react";
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
-  const [isActive, SetISActive] = useState(0);
+  const [isActive, setActive] = useState(0);
+  const location = useLocation();
 
-  // const[active, setActive] = useState(false)
-  // console.log(active);
+  useEffect(() => {
+    // Extract the pathname from the location object
+    const { pathname } = location;
+    // Update the active state based on the pathname
+    if (pathname === "/") {
+      setActive(0);
+    } else if (pathname === "/aboutus") {
+      setActive(1);
+    } else if (pathname === "/service") {
+      setActive(2);
+    } else if (pathname === "/contactus") {
+      setActive(3);
+    }
+  }, [location]);
+
   const handleClick = (index) => {
-    SetISActive(index);
-
+    setActive(index);
   };
 
-
-  const showHamburger =()=>{
-    setShow(!show)
-  }
-
-  
+  const showHamburger = () => {
+    setShow(!show);
+  };
 
   return (
     <div className="bg-black bg-opacity-70 top-0 w-full ">
@@ -60,8 +70,7 @@ const Navbar = () => {
               <li>
                 <Link
                   to="/aboutus"
-                  onClick={() => handleClick(1)
-                  }
+                  onClick={() => handleClick(1)}
                   className={`${isActive === 1 && "active"} relative`}
                 >
                   About
