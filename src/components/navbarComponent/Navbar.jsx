@@ -28,7 +28,7 @@ const Navbar = () => {
         style={{ maxWidth: "1440px", margin: "auto" }}
         className="relative w-11/12 text-white-100 flex justify-between items-center  "
       >
-        <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full items-center py-7 ">
+        <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full items-center py-7 relative ">
           <Link to="/">
             <img
               src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png"
@@ -36,7 +36,7 @@ const Navbar = () => {
               className="rounded-sm"
             />
           </Link>
-          <div className="lg:hidden block z-50 " onClick={showHamburger}>
+          <div className="lg:hidden block z-50 fixed top-6 pt-3" onClick={showHamburger}>
             <Hamburger color="red" />
           </div>
         </div>
