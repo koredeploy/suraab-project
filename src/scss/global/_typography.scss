@@ -45,12 +45,19 @@ h3 {
   @include fluid-type($min_width, $max_width, 18px, 24px);
 }
 
+a {
+  @include fluid-type($min_width, $max_width, 16px, 18px);
+}
+
 p,
 span {
   margin-block: 0;
-  @include fluid-type($min_width, $max_width, 16px, 16px);
+  @include fluid-type($min_width, $max_width, 16px, 20px);
 }
 
+// p{
+//   @include fluid-type($min_width, $max_width, 16px, 20px)
+// }
 .tiny-text {
   @include fluid-type($min_width, $max_width, 12px, 12px);
 }
@@ -60,11 +67,12 @@ span {
 }
 
 .medium-text {
-  @include fluid-type($min_width, $max_width, 16px, 20px);
+  @include fluid-type($min_width, $max_width, 16px, 24px);
 }
 
 .large-text {
-  @include fluid-type($min_width, $max_width, 20px, 40px);
+  @include fluid-type($min_width, $max_width, 20px, 44px);
+  
 }
 
 .btn-text {

@@ -1,3 +1,5 @@
+@use '../utils/functions' as fn;
+
 @mixin flex {
   display: flex;
   flex-direction: row;
@@ -36,4 +38,17 @@
 @mixin responsive {
   max-width: 1400px;
   margin: auto;
+}
+
+@mixin mobileLogo{
+  
+    height: fn.rem(50);
+    width: fn.rem(50);
+}
+
+
+@mixin desktopLogo{
+  
+  height: fn.rem(60);
+  width: fn.rem(60);
 }

@@ -27,7 +27,7 @@ const ContactUs = () => {
         <h1 className="text-white-100 large-text ">
           Ready to Book Your First <br /> Service
         </h1>
-        <p className="w-full lg:w-3/5 mx-auto medium-text ">
+        <p className="w-full lg:w-3/5 mx-auto ">
           Our mission is to redefine excellence in electrical solutions,
           illuminating homes and lives with a commitment to safety, reliability,
           and innovation. We embark on this mission
