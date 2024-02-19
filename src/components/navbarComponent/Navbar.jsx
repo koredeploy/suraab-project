@@ -85,15 +85,6 @@ const Navbar = () => {
                   Services
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/contactus"
-                  onClick={() => handleClick(3)}
-                  className={`${isActive === 3 && "active"} relative`}
-                >
-                  Contact
-                </Link>
-              </li>
             </ul>
           </nav>
           {/* <Link> */}{" "}
