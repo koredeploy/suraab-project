@@ -32,7 +32,7 @@ const Navbar = () => {
     <div className="bg-black bg-opacity-70 top-0 w-full">
       <header
         style={{ maxWidth: "1440px", margin: "auto" }}
-        className="relative w-11/12 text-white-100 flex justify-between items-center py-6 "
+        className="relative w-11/12 text-white-100 flex justify-between items-center zzpy-6 "
       >
         <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full items-center z-50">
           <Link to="/">

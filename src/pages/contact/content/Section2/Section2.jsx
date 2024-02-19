@@ -50,16 +50,16 @@ const Section2 = () => {
       );
 
       // Send data to backend API
-      // await axios.post(
-      //   "https://contact-form-api-xntq.onrender.com/api/v1/mailing",
-      //   {
-      //     name: data.name,
-      //     phone: data.phone,
-      //     email: data.email,
-      //     subject: data.subject,
-      //     message: data.message,
-      //   }
-      // );
+      await axios.post(
+        "https://contact-form-api-xntq.onrender.com/api/v1/mailing",
+        {
+          name: data.name,
+          phone: data.phone,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+        }
+      );
 
       setFormSubmitted(false);
       reset();
