@@ -10,8 +10,10 @@ const Navbar = () => {
 
   const handleClick = (index) => {
     SetISActive(index);
-    setShow(false)
+    setShow(!show)
   };
+
+  
 
   return (
     <div className="bg-black bg-opacity-70 top-0 w-full ">
