@@ -8,7 +8,7 @@ import email from "../../../../assets/email.png";
 import { useForm } from "react-hook-form";
 
 // eslint-disable-next-line react/prop-types
-const Section2 = ({setOpen}) => {
+const Section2 = ({ setOpen }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -64,7 +64,7 @@ const Section2 = ({setOpen}) => {
       );
 
       setFormSubmitted(false);
-      setOpen(true)
+      setOpen(true);
       reset();
       navigate("/contactus", { replace: true });
     } catch (error) {
@@ -151,6 +151,12 @@ const Section2 = ({setOpen}) => {
                   type="tel"
                   {...register("phone", {
                     required: "Phone number is required",
+                    pattern: {
+                      value:
+                        /(\+\d{1,3}\s?)?((\(\d{3}\)\s?)|(\d{3})(\s|-?))(\d{3}(\s|-?))(\d{4})(\s?(([E|e]xt[:|.|]?)|x|X)(\s?\d+))?/, // Regex pattern to accept only numbers
+                      message:
+                        "Invalid phone number. Please enter only digits.",
+                    },
                   })}
                   className="w-full border border-[#ebebeb] rounded-md p-2"
                 />

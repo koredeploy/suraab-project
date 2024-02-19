@@ -47,7 +47,7 @@ const ContactUs = () => {
                     message: "Invalid email address",
                   },
                 })}
-                className="p-3 w-full text-black-500 py-5 rounded-none"
+                className="p-3 w-full text-black-500 py-5 rounded-none outline-none"
                 placeholder="Your Email"
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -60,7 +60,7 @@ const ContactUs = () => {
             </div>
             <button
               type="submit"
-              className="w-5/12 bg-red-400 px-5 lg:px-20 py-5"
+              className="w-5/12 bg-red-400 px-4 lg:px-20 py-5"
             >
               Contact us
             </button>
