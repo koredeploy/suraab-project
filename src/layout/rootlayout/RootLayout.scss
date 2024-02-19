@@ -1,0 +1,5 @@
+@use '../../scss/utils/functions' as fn;
+
+.layout{
+    padding-top: fn.rem(125);
+}
