@@ -7,7 +7,8 @@ import phone from "../../../../assets/phoneNumber.png";
 import email from "../../../../assets/email.png";
 import { useForm } from "react-hook-form";
 
-const Section2 = () => {
+// eslint-disable-next-line react/prop-types
+const Section2 = ({setOpen}) => {
   const location = useLocation();
   const navigate = useNavigate();
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -63,6 +64,7 @@ const Section2 = () => {
       );
 
       setFormSubmitted(false);
+      setOpen(true)
       reset();
       navigate("/contactus", { replace: true });
     } catch (error) {
