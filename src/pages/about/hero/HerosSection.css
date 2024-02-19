@@ -183,12 +183,19 @@ span {
   src: local("BricolageGrotesque-Regular"), url("../fonts/BricolageGrotesque-Regular.ttf") format("truetype");
   font-weight: 700;
 }
-d .service-bg {
+.service-bg {
   background-image: url(../../../assets/about_us_bg.png);
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
   background-size: cover;
-  height: 50vh;
+  height: auto;
+  min-height: 18.75rem;
   background-position: center;
+}
+
+@media (width > 700px) {
+  .service-bg {
+    min-height: 27.25rem;
+  }
 }/*# sourceMappingURL=HerosSection.css.map */

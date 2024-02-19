@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 50vh;
+  height: auto;
 }
 .contact-background .responsive {
   max-width: 1400px;
