@@ -58,7 +58,9 @@ const FadedCarousel = () => {
               }
             >
               <img className="card_image" src={image.image} alt="" />
-              <div className="card_overlay"></div>
+              <div className="card_overlay">
+                
+              </div>
             </div>
           );
         })}
