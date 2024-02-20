@@ -7,7 +7,7 @@
   background-color: color.$red-300;
   background-image: url('../../../../assets/naked-wire.png'), url('../../../../assets/riple-effect.png');
   background-repeat: no-repeat;
-  background-position: 0% 1s0%, right top;
+  background-position: 0% 10%, right top;
   .responsive{
     @include mixins.responsive;
 
