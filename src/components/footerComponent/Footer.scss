@@ -2,15 +2,6 @@
 @use '../../scss/utils/mixins'as mixins;
 
 
-.logo{
-  @include mixins.mobileLogo;
-}
-
-@media(width > 465px){
-  .logo{
-    @include mixins.desktopLogo;
-  }
-}
 .responsive{
     @include mixins.responsive;
 }

@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react"; // Import the useEffect hook
 import ContactBtn from "../ContactBtn/ContactBtn";
 import "./Footer.scss";
+import logo from '../../assets/new-logo.png'
 
 const Footer = () => {
   // Scroll to the top of the page when the component mounts
@@ -21,8 +22,8 @@ const Footer = () => {
       >
         <div className="flex flex-col gap-5 items-start">
           <Link to="/" onClick={handleLinkClick}>
-            <img className="logo"
-              src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png"
+            <img className=""
+              src={logo}
               alt=""
             />
           </Link>
@@ -58,12 +59,12 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="flex flex-col gap-3 items-start">
+        <div className="flex flex-col gap-3 items-start ">
           <h2 className="medium-text font-semibold text-center lg:text-start">
             Contact Us
           </h2>
-          <p className="text-start ">
-            158, Ikotun - Idumu Road, Nobex Bus Stop, <br /> Idumu Lagos.
+          <p className="text-start w-11/12 ">
+            158, Ikotun - Idumu Road, Nobex Bus Stop, Idumu Lagos.
           </p>
           <p className="text-start">08029074622</p>
           <p className="text-start">09032528531</p>

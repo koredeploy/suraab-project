@@ -111,14 +111,14 @@ const Navbar = () => {
                 <Link
                   to="/service"
                   onClick={() => handleClick(2)}
-                  className={`${isActive === 2 && "active"} relative pb-4`}
+                  className={`${isActive === 2 && "active"} relative `}
                 >
                   Services
                 </Link>
               </li>
             </ul>
           </nav>
-          <div className="mt-4 py-5">
+          <div className="mt-6 lg:mt-0 py-5">
             <ContactBtn />
           </div>
         </div>
