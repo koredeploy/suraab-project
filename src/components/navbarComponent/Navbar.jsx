@@ -56,7 +56,7 @@ const Navbar = () => {
             />
           </Link>
           <div className="lg:hidden block fixed top-5 pb-3 pr-2  md:pr-6 z-50  right-0" onClick={showHamburger}>
-            <Hamburger color="red" />
+            <Hamburger color="red" toggled={isOpen} toggle={setOpen} />
           </div>
         </div>
 
