@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import suraab_logo from "../../assets/suraab_logo.svg"
+import suraab_logo from "../../assets/suraab_logo.svg";
 import "./Navbar.scss";
 import ContactBtn from "../ContactBtn/ContactBtn";
 import { Sling as Hamburger } from "hamburger-react";
@@ -9,12 +9,30 @@ const Navbar = () => {
   const [show, setShow] = useState(false);
   const [isActive, setActive] = useState(0);
   const location = useLocation();
-  const [isOpen, setOpen] = useState(false)
+  const [isOpen, setOpen] = useState(false);
+  const [isTransparent, setIsTransparent] = useState(true);
 
   useEffect(() => {
-    // Extract the pathname from the location object
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      // Change the value according to the scroll position where you want the transparency to change
+      const scrollThreshold = 10;
+      if (scrollPosition > scrollThreshold) {
+        setIsTransparent(true);
+      } else {
+        setIsTransparent(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     const { pathname } = location;
-    // Update the active state based on the pathname
     if (pathname === "/") {
       setActive(0);
     } else if (pathname === "/aboutus") {
@@ -28,8 +46,8 @@ const Navbar = () => {
 
   const handleClick = (index) => {
     setActive(index);
-    show ? setShow(false) : setShow(true) // Close side menu when a menu item is clicked
-    window.scrollTo(0, 0); // Scroll to top
+    setShow(false);
+    window.scrollTo(0, 0);
   };
 
   const showHamburger = () => {
@@ -37,25 +55,28 @@ const Navbar = () => {
   };
 
   const closeMenu = () => {
-    setShow(false)
-    setOpen(false)
-  }
+    setShow(false);
+    setOpen(false);
+  };
 
   return (
-    <div className="bg-black-500  fixed z-50 bg-opacity-30 top-0 w-full">
+    <div
+      className={`fixed z-50 top-0 w-full ${
+        isTransparent ? "bg-opacity-30 bg-black" : ""
+      }`}
+    >
       <header
         style={{ maxWidth: "1440px", margin: "auto" }}
         className="relative w-11/12 text-white-100 flex justify-between items-center"
       >
         <div className="flex justify-between xl:w-2/5 lg:w-2/5 w-full items-center py-5 lg:py-6">
           <Link to="/">
-            <img
-              src={suraab_logo}
-              alt=""
-              className="rounded-sm logo"
-            />
+            <img src={suraab_logo} alt="" className="rounded-sm logo" />
           </Link>
-          <div className="lg:hidden block fixed top-5 pb-3 pr-2  md:pr-6 z-50  right-0" onClick={showHamburger}>
+          <div
+            className="lg:hidden block fixed top-5 pb-3 pr-2  md:pr-6 z-50  right-0"
+            onClick={showHamburger}
+          >
             <Hamburger color="red" toggled={isOpen} toggle={setOpen} />
           </div>
         </div>
