@@ -61,7 +61,7 @@ nav a::after {
       box-sizing: border-box;
       border: none;
       width: 100% !important;
-      height: calc(100vh - 350px);
+      height: calc(100vh - 240px);
       right: 0 !important;
       top: 0;
       max-height: 460px !important;
@@ -93,5 +93,6 @@ nav a::after {
     width: 100%;
     justify-content: center;
     align-items: center;
+    box-shadow:  0 2px 50px rgba(0, 0, 0, 0.692);
   }
 }
