@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import suraab_logo from "../../assets/new-logo.png";
+import suraab_mobile from '../../assets/suraab_logo.svg'
 import "./Navbar.scss";
 import ContactBtn from "../ContactBtn/ContactBtn";
 import { Sling as Hamburger } from "hamburger-react";
@@ -71,7 +72,8 @@ const Navbar = () => {
       >
         <div className="flex justify-between xl:w-2/5 lg:w-2/5 w-full items-center py-5 ">
           <Link to="/">
-            <img src={suraab_logo} alt="" className="" />
+            <img src={suraab_logo} alt="" className="hidden lg:block desktop-logo" />
+            <img src={suraab_mobile} alt="" className="block lg:hidden logo" />
           </Link>
           <div
             className="lg:hidden block fixed top-5 pb-3 pr-3  md:pr-6 z-50  right-0"
