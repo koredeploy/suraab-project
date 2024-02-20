@@ -46,9 +46,9 @@ const Section2 = () => {
                   the efficiency and sustainability of electrical systems.
                 </p>
               </div>
-             <div className="flex justify-center lg:justify-start">
-             <ContactBtn/>
-             </div>
+              <div className="flex justify-center lg:justify-start">
+                <ContactBtn />
+              </div>
             </div>
           </div>
           <div className="flex flex-col lg:flex-row gap-5 items-center ">
@@ -85,9 +85,9 @@ const Section2 = () => {
                   the efficiency and sustainability of electrical systems.
                 </p>
               </div>
-                <div className="flex justify-center lg:justify-start">
-                <ContactBtn/>
-                </div>
+              <div className="flex justify-center lg:justify-start">
+                <ContactBtn />
+              </div>
             </div>
           </div>
 
@@ -102,9 +102,9 @@ const Section2 = () => {
               <p className=" text-center lg:text-start pb-2 w-full lg:w-11/12">
               Lorem ipsum dolor sit amet consectetur. Fermentum ut arcu morbi turpis neque. Amet malesuada vivamus egestas rhoncus ultrices. Phasellus aliquam magna aliquam pellentesque pretium. Quis vitae molestie aliquam nibh tincidunt in quam vestibulum. Tortor eget varius diam mauris volutpat vitae urna. Adipiscing imperdiet interdum pellentesque nulla convallis mattis quam. Ultrices porttitor ridiculus ac sed odio vitae lorem. Pellentesque ac pulvinar magna aliquet dictumst. Nulla diam lorem id orci gravida. Quam dictum sed sit bibendum et congue vel dui. Egestas tincidunt nec sit rhoncus nibh. Quis risus vestibulum risus pretium in neque malesuada amet lobortis.Habitant molestie in eget et dictumst. Praesent eu sed sollicitudin urna tempor senectus eros. Placerat ut nunc.
               </p>
-             
+
               <div className="flex justify-center lg:justify-start">
-              <ContactBtn/>
+                <ContactBtn />
               </div>
             </div>
           </div>
