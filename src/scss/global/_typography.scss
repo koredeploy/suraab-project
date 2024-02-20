@@ -90,6 +90,6 @@ span {
   @include fluid-type($min_width, $max_width, 14px, 16px);
 }
 .hero-text{
-  @include fluid-type(-$min_width, $max_width, 24px, 50px);
-  line-height: 1.2;
+  @include fluid-type(-$min_width, $max_width, 20px, 48px);
+  line-height: 1.15;
 }
