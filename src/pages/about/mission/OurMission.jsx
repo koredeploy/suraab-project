@@ -20,7 +20,7 @@ const OurMission = () => {
             </div>
             <div className="grid grid-cols-1 gap-3">
               <h1 className="large-text font-bold text-center lg:text-start">Our Mission at Suraab Electricals</h1>
-              <p className=" text-center lg:text-start w-full lg:w-4/5 ">
+              <p className=" text-center lg:text-start w-full xl:w-4/5 ">
               our mission is to redefine excellence in electrical solutions, illuminating homes and lives with a commitment to safety, reliability, and innovation. We embark on this mission
               </p>
              
@@ -28,7 +28,7 @@ const OurMission = () => {
                 <span>
                   <img src={check} alt="" />
                 </span>
-                <p className="w-full lg:w-3/4">
+                <p className="w-full xl:w-3/4">
                   We bring a level of craftsmanship to our projects that
                   reflects our dedication to quality and precision.
                 </p>
@@ -37,7 +37,7 @@ const OurMission = () => {
                 <span>
                   <img src={check} alt="" />
                 </span>
-                <p className="pb-4 w-full lg:w-3/4">
+                <p className="pb-4 w-full xl:w-3/4">
                   Subhar Electricals introduces innovative practices to enhance
                   the efficiency and sustainability of electrical systems.
                 </p>

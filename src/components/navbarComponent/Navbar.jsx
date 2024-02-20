@@ -40,7 +40,7 @@ const Navbar = () => {
         style={{ maxWidth: "1440px", margin: "auto" }}
         className="relative w-11/12 text-white-100 flex justify-between items-center"
       >
-        <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full items-center py-5 lg:py-6">
+        <div className="flex justify-between xl:w-2/5 lg:w-2/5 w-full items-center py-5 lg:py-6">
           <Link to="/">
             <img
               src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png"
@@ -48,7 +48,7 @@ const Navbar = () => {
               className="rounded-sm logo"
             />
           </Link>
-          <div className="lg:hidden block fixed top-6 pr-4 z-50 pt-2 right-0" onClick={showHamburger}>
+          <div className="lg:hidden block fixed top-5 pb-3 pr-2  md:pr-6 z-50  right-0" onClick={showHamburger}>
             <Hamburger color="red" />
           </div>
         </div>
@@ -57,7 +57,7 @@ const Navbar = () => {
           className={`${show ? "menu" : ""} lg:flex items-center justify-between w-3/4 hidden border-0 lg:border-0 border-t-2 border-stone-700`}
         >
           <nav>
-            <ul className="flex lg:flex-row flex-col gap-16 text-white">
+            <ul className="flex lg:flex-row flex-col gap-16 xl:gap-28 text-white">
               <li>
                 <Link
                   to="/"
