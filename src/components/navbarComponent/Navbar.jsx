@@ -47,16 +47,16 @@ const Navbar = () => {
         style={{ maxWidth: "1440px", margin: "auto" }}
         className="relative w-11/12 text-white-100 flex justify-between items-center"
       >
-        <div className="flex justify-between xl:w-2/5 lg:w-1/4 w-full items-center py-5 lg:py-7">
+        <div className="flex justify-between xl:w-2/5 lg:w-2/5 w-full items-center py-5 lg:py-6">
           <Link to="/">
             <img
               src={suraab_logo}
               alt=""
-              className="rounded-sm w-14 lg:w-auto lg:pt-0 pt-2"
+              className="rounded-sm logo"
             />
           </Link>
-          <div className="lg:hidden block fixed top-6 pr-4 z-50 pt-2 right-0" onClick={showHamburger}>
-            <Hamburger color="red" rounded toggled={isOpen} toggle={setOpen} />
+          <div className="lg:hidden block fixed top-5 pb-3 pr-2  md:pr-6 z-50  right-0" onClick={showHamburger}>
+            <Hamburger color="red" />
           </div>
         </div>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
           onClick={closeMenu}
         >
           <nav>
-            <ul className="flex lg:flex-row flex-col gap-16 text-white">
+            <ul className="flex lg:flex-row flex-col gap-16 xl:gap-28 text-white">
               <li>
                 <Link
                   to="/"
