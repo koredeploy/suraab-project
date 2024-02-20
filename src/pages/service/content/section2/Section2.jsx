@@ -20,7 +20,7 @@ const Section2 = () => {
             />
             <div className="grid grid-cols-1 gap-4">
               <h4 className="medium-text text-center lg:text-start">Electrical Troubleshooting</h4>
-              <p className=" text-center lg:text-start w-full lg:w-11/12">
+              <p className=" text-center lg:text-start w-full xl:w-11/12">
                 Lorem ipsum dolor sit amet consectetur. Eget fames dignissim dui
                 eu quam quisque nunc in. Nam auctor vulputate ultrices
                 tincidunt. Mus quis dignissim adipiscing viverra et. Rutrum sit
@@ -32,7 +32,7 @@ const Section2 = () => {
                 <span>
                   <img src={check} alt="" />
                 </span>
-                <p className="w-full lg:w-1/2">
+                <p className="w-full xl:w-1/2">
                   We bring a level of craftsmanship to our projects that 
                   reflects our dedication to quality and precision.
                 </p>
@@ -41,7 +41,7 @@ const Section2 = () => {
                 <span>
                   <img src={check} alt="" />
                 </span>
-                <p className="pb-2 w-full lg:w-1/2">
+                <p className="pb-2 w-full xl:w-1/2">
                   Subhar Electricals introduces innovative practices to enhance
                   the efficiency and sustainability of electrical systems.
                 </p>
@@ -59,7 +59,7 @@ const Section2 = () => {
             />
             <div className="grid grid-cols-1 gap-3">
               <h4 className="medium-text text-center lg:text-start">Lighting Installations</h4>
-              <p className="text-center lg:text-start w-full lg:w-11/12">
+              <p className="text-center lg:text-start w-full xl:w-11/12">
                 Lorem ipsum dolor sit amet consectetur. Eget fames dignissim dui
                 eu quam quisque nunc in. Nam auctor vulputate ultrices
                 tincidunt. Mus quis dignissim adipiscing viverra et. Rutrum sit
@@ -71,7 +71,7 @@ const Section2 = () => {
                 <span>
                   <img src={check} alt="" />
                 </span>
-                <p className="w-full lg:w-1/2">
+                <p className="w-full xl:w-1/2">
                   We bring a level of craftsmanship to our projects that
                   reflects our dedication to quality and precision.
                 </p>
@@ -80,7 +80,7 @@ const Section2 = () => {
                 <span>
                   <img src={check} alt="" />
                 </span>
-                <p className="pb-2 w-full lg:w-1/2">
+                <p className="pb-2 w-full xl:w-1/2">
                   Subhar Electricals introduces innovative practices to enhance
                   the efficiency and sustainability of electrical systems.
                 </p>
@@ -99,7 +99,7 @@ const Section2 = () => {
             />
             <div className="grid grid-cols-1 gap-3">
               <h4 className="medium-text text-center lg:text-start">Electrical Maintenance</h4>
-              <p className=" text-center lg:text-start pb-2 w-full lg:w-11/12">
+              <p className=" text-center lg:text-start pb-2 w-full xl:w-11/12">
               Lorem ipsum dolor sit amet consectetur. Fermentum ut arcu morbi turpis neque. Amet malesuada vivamus egestas rhoncus ultrices. Phasellus aliquam magna aliquam pellentesque pretium. Quis vitae molestie aliquam nibh tincidunt in quam vestibulum. Tortor eget varius diam mauris volutpat vitae urna. Adipiscing imperdiet interdum pellentesque nulla convallis mattis quam. Ultrices porttitor ridiculus ac sed odio vitae lorem. Pellentesque ac pulvinar magna aliquet dictumst. Nulla diam lorem id orci gravida. Quam dictum sed sit bibendum et congue vel dui. Egestas tincidunt nec sit rhoncus nibh. Quis risus vestibulum risus pretium in neque malesuada amet lobortis.Habitant molestie in eget et dictumst. Praesent eu sed sollicitudin urna tempor senectus eros. Placerat ut nunc.
               </p>
 
