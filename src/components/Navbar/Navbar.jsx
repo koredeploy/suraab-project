@@ -118,7 +118,7 @@ const Navbar = () => {
               </li>
             </ul>
           </nav>
-          <div className="py-6">
+          <div className="mt-4 py-5">
             <ContactBtn />
           </div>
         </div>
