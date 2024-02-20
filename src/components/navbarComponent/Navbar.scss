@@ -1,3 +1,16 @@
+@use '../../scss/utils/functions'as fn;
+@use '../../scss/utils/mixins'as mixins;
+
+.logo{
+  @include mixins.mobileLogo;
+}
+
+@media(width > 465px){
+  .logo{
+    @include mixins.desktopLogo;
+  }
+}
+
 .bg-black {
   background-color: rgba(0, 0, 0, 0.926) !important;
 }
@@ -35,14 +48,17 @@ nav a::after {
       background-color: rgba(0, 0, 0, 0.926) !important;
       position: fixed;
       padding: 1rem;
-      width: 40% !important;
-      height: calc(100vh - 50px) !important;
+      margin: 0;
+      box-sizing: border-box;
+      border: none;
+      width: 100% !important;
+      height: calc(100vh - 200px);
       right: 0 !important;
-      top: 108px;
+      top: 0;
+      max-height: 460px !important;
       animation: spin 0.4s ease-in-out;
       transition: all 0.5s ease-in-out;
-      z-index: 10;
-    
+      z-index: 40;
   }
 
   @keyframes spin {
@@ -62,6 +78,11 @@ nav a::after {
 
 @media screen and (max-width: 600px) {
   header .menu {
-    width: 75% !important;
+    padding-top: 6rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }
