@@ -111,7 +111,7 @@ const Navbar = () => {
                 <Link
                   to="/service"
                   onClick={() => handleClick(2)}
-                  className={`${isActive === 2 && "active"} relative`}
+                  className={`${isActive === 2 && "active"} relative pb-4`}
                 >
                   Services
                 </Link>
