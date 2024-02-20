@@ -1,9 +1,14 @@
 @use '../../scss/utils/functions'as fn;
 @use '../../scss/utils/mixins'as mixins;
 
+
+.responsive{
+  @include mixins.responsive;
+}
 .logo{
   @include mixins.mobileLogo;
 }
+
 
 @media(width > 465px){
   .logo{

@@ -1,70 +1,51 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import "./FadedCarousel.scss";
+import { useState, useEffect } from 'react';
+import './FadedCarousel.scss'
 
 const FadedCarousel = () => {
-  const [current, setCurrent] = useState(0);
-  const [autoPlay, setAutoPlay] = useState(true);
-  let timeOut = null;
-
-  const images = [
-    {
-      image: "frame1.jpg",
-    },
-    {
-      image: "frame2.jpg",
-    },
-    {
-      image: "frame3.jpg",
-    },
-    {
-      image: "frame4.jpg",
-    },
-  ];
+  const [index, setIndex] = useState(0);
+  const images = ['https://res.cloudinary.com/doejcrfso/image/upload/v1708428566/fadein2_pnepgn.png', 'https://res.cloudinary.com/doejcrfso/image/upload/v1708428566/fadein1_cqmuuj.png', 'https://res.cloudinary.com/doejcrfso/image/upload/v1708428564/fadein3_jgqake.png']; // Add your image URLs here
+  const imageUrl = images[index];
 
   useEffect(() => {
-    timeOut =
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-      autoPlay &&
-      setTimeout(() => {
-        slideRight();
-      }, 5000);
-  });
+    const intervalId = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000);
 
-  const slideRight = () => {
-    setCurrent(current === images.length - 1 ? 0 : current + 1);
-  };
+    return () => clearInterval(intervalId);
+  }, [images.length]);
 
   return (
     <div
-      className="carousel"
-      onMouseEnter={() => {
-        setAutoPlay(false);
-        clearTimeout(timeOut);
-      }}
-      onMouseLeave={() => {
-        setAutoPlay(true);
-      }}
+      className="carousel-container"
+     
     >
-      <div className="carousel_wrapper">
-        {images.map((image, index) => {
-          return (
-            <div
-              key={index}
-              className={
-                index === current
-                  ? "carousel_card carousel_card-active"
-                  : "carousel_card"
-              }
-            >
-              <img className="card_image" src={image.image} alt="" />
-              <div className="card_overlay">
-                
-              </div>
-            </div>
-          );
-        })}
-      </div>
+      {/* <h1
+        className="carousel-heading"
+        style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          zIndex: 1,
+          color: '#ffffff', // Adjust text color as needed
+        }}
+      >
+      
+      </h1> */}
+      <div
+        className="background-image"
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          backgroundImage: `url(${imageUrl})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          transition: 'background-image 1s ease',
+        }}
+      ></div>
     </div>
   );
 };

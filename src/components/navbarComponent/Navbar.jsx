@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import suraab_logo from "../../assets/suraab_logo.svg";
+import suraab_logo from "../../assets/new-logo.png";
 import "./Navbar.scss";
 import ContactBtn from "../ContactBtn/ContactBtn";
 import { Sling as Hamburger } from "hamburger-react";
@@ -66,15 +66,15 @@ const Navbar = () => {
       }`}
     >
       <header
-        style={{ maxWidth: "1440px", margin: "auto" }}
-        className="relative w-11/12 text-white-100 flex justify-between items-center"
+        
+        className="responsive relative w-11/12 text-white-100 flex justify-between items-center"
       >
-        <div className="flex justify-between xl:w-2/5 lg:w-2/5 w-full items-center py-5 lg:py-6">
+        <div className="flex justify-between xl:w-2/5 lg:w-2/5 w-full items-center py-5 ">
           <Link to="/">
-            <img src={suraab_logo} alt="" className="rounded-sm logo" />
+            <img src={suraab_logo} alt="" className="" />
           </Link>
           <div
-            className="lg:hidden block fixed top-5 pb-3 pr-2  md:pr-6 z-50  right-0"
+            className="lg:hidden block fixed top-5 pb-3 pr-3  md:pr-6 z-50  right-0"
             onClick={showHamburger}
           >
             <Hamburger color="red" toggled={isOpen} toggle={setOpen} />
@@ -82,11 +82,11 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`${show ? "menu" : ""} lg:flex items-center justify-between w-8/12 hidden border-0 lg:border-0 border-t-2 border-stone-700`}
+          className={`${show ? "menu" : ""} lg:flex items-center justify-between  gap-10 lg:gap-16 xl:gap-20 hidden border-0 lg:border-0 border-t-2 border-stone-700`}
           onClick={closeMenu}
         >
           <nav>
-            <ul className="flex lg:flex-row flex-col gap-16 xl:gap-28 text-white">
+            <ul className="flex lg:flex-row flex-col gap-10 lg:gap-16 xl:gap-20 text-white">
               <li>
                 <Link
                   to="/"
@@ -116,7 +116,7 @@ const Navbar = () => {
               </li>
             </ul>
           </nav>
-          <div className="py-10">
+          <div className="py-6">
             <ContactBtn />
           </div>
         </div>

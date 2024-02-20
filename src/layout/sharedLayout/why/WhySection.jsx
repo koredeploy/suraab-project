@@ -8,7 +8,7 @@ const WhySection = () => {
     <div className="bg-red-500">
       <div className="w-11/12 mx-auto text-white-100 text-center lg:text-left leading-9 py-14 responsive">
         <div className="py-3">
-          <h4 className="text-center text-white-100 medium-text">WHY SURAAB</h4>
+          <h4 className="text-center text-white-100 medium-text">WHY SURAAB ?</h4>
           <h1 className="text-center text-white-100 large-text py-3 w-full lg:w-3/4 mx-auto">
             Lorem ipsum dolor sit amet consectetur. Lobortis porttitor
           </h1>
