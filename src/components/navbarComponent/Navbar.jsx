@@ -51,7 +51,7 @@ const Navbar = () => {
   };
 
   const showHamburger = () => {
-    setShow(!show);
+    setShow(!show); 
   };
 
   const closeMenu = () => {
