@@ -1,13 +1,16 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.scss";
 import ContactBtn from "../ContactBtn/ContactBtn";
 import { Sling as Hamburger } from "hamburger-react";
+import menu from "../../assets/menu.svg"
 
 const Navbar = () => {
   const [show, setShow] = useState(false);
   const [isActive, setActive] = useState(0);
   const location = useLocation();
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     // Extract the pathname from the location object
@@ -26,7 +29,7 @@ const Navbar = () => {
 
   const handleClick = (index) => {
     setActive(index);
-    setShow(false); // Close side menu when a menu item is clicked
+    show ? setShow(false) : setShow(true) // Close side menu when a menu item is clicked
     window.scrollTo(0, 0); // Scroll to top
   };
 
@@ -48,8 +51,8 @@ const Navbar = () => {
               className="rounded-sm logo"
             />
           </Link>
-          <div className="lg:hidden block fixed top-5 pb-3 pr-2  md:pr-6 z-50  right-0" onClick={showHamburger}>
-            <Hamburger color="red" />
+          <div className="lg:hidden block " onClick={showHamburger}>
+            <img className="text-red-400 z-50 fixed top-5 pb-3 pr-2  md:pr-6  right-0 w-[60px] h-[60px]" src={menu} alt=""  />
           </div>
         </div>
 
