@@ -9,6 +9,10 @@
   @include mixins.mobileLogo;
 }
 
+.desktop-logo{
+  @include mixins.desktopLogo;
+}
+
 
 @media(width > 465px){
   .logo{
