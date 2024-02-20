@@ -4,6 +4,9 @@
 
 .section-two{
     background-color: color.$red-200;
+    background-image: url('../../../../assets/service-backdrop.png');
+    background-repeat: no-repeat;
+    background-position: 0% 32%;
     .responsive{
       @include mixins.responsive
     }

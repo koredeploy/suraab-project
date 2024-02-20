@@ -33,6 +33,17 @@ $max_width: 1440px;
 $min_font: 24px;
 $max_font: 48px;
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: fn.rem(0.5);
+  line-height: 1.2;
+}
+
 h1 {
   @include fluid-type($min_width, $max_width, 24px, 44px);
 }
@@ -77,4 +88,8 @@ span {
 
 .btn-text {
   @include fluid-type($min_width, $max_width, 14px, 16px);
+}
+.hero-text{
+  @include fluid-type(-$min_width, $max_width, 24px, 50px);
+  line-height: 1.2;
 }
