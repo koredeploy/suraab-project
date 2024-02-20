@@ -21,9 +21,9 @@ const Section2 = () => {
                 </div>
               <div className='relative'>
               <div className='bg-white-100 shadow-2xl p-7 z-20 xl:absolute lg:-top-32 xl:-top-36 xl:-left-12 '>
-                    <p className='py-4 text-center lg:text-start medium-text'>WHO WE ARE</p>
-                    <h1 className='large-text text-center lg:text-start'>Lorem ipsum dolor sit amet consectetur. Cras lorem.</h1>
-                    <p className='medium-text text-center lg:text-start'>Lorem ipsum dolor sit amet consectetur. Quam non habitasse vel nam tincidunt odio arcu. Et lacus commodo in leo faucibus vel volutpat suscipit. Eu natoque nullam diam augue quam non. Ut adipiscing augue dui magna ante justo enim. Risus non nulla facilisi arcu. Gravida enim id mi suspendisse pellentesque. Vitae sit maecenas neque eu ut. Dignissim sollicitudin orci odio egestas mi libero mattis. Venenatis scelerisque amet volutpat lorem. </p>
+                    <h4 className='py-4 text-center lg:text-start medium-text'>WHO WE ARE</h4>
+                    <h1 className='text-4xl pb-4 text-center lg:text-start text-red-400'>Lorem ipsum dolor sit amet consectetur. Cras lorem.</h1>
+                    <p className='text-center lg:text-start'>Lorem ipsum dolor sit amet consectetur. Quam non habitasse vel nam tincidunt odio arcu. Et lacus commodo in leo faucibus vel volutpat suscipit. Eu natoque nullam diam augue quam non. Ut adipiscing augue dui magna ante justo enim. Risus non nulla facilisi arcu. Gravida enim id mi suspendisse pellentesque. Vitae sit maecenas neque eu ut. Dignissim sollicitudin orci odio egestas mi libero mattis. Venenatis scelerisque amet volutpat lorem. </p>
                     <div className='py-7 flex justify-center items-center lg:justify-start lg:items-start'>
                         <ContactBtn/>
                     </div>

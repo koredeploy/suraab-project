@@ -5,7 +5,7 @@ const Testimonial = () => {
   return (
     <div>
       <div className=" w-11/12 mx-auto py-10 responsive ">
-        <p className="text-center large-text">WHAT OUR CUSTOMERS SAY</p>
+        <p className="text-center medium-text font-bold text-black-100 pb-3">WHAT OUR CUSTOMERS SAY</p>
         <h2 className="text-red-400 text-center large-text">
           Don’t Just Take Our Word For It.
         </h2>
@@ -13,7 +13,7 @@ const Testimonial = () => {
         <div className="p-7 border-x-black-500 border-2 relative">
             <img src={apostropheR} className=' absolute top-7 right-0 px-3' alt="" />
             <img src={apostropheL} alt="" className='absolute top-7 left-0 px-3'  />
-            <p className="medium-text px-3 ">
+            <p className=" px-3 text-base lg:text-lg font-medium ">
               Lorem ipsum dolor sit amet consectetur. Sed iaculis et sapien
               neque. Lectus felis eu adipiscing dolor ut eget iaculis mauris
               nec. Purus rhoncus vel id tortor nulla dictum duis at vestibulum.
@@ -22,7 +22,7 @@ const Testimonial = () => {
               Vivamus diam enim commodoi.
             </p>
           
-            <div className='flex justify-center items-center gap-4 py-4'>
+            <div className='flex justify-center items-center gap-4 py-5'>
               <span>
                 <img className='profile-img' src={profileImg} alt="" />
               </span>
@@ -35,7 +35,7 @@ const Testimonial = () => {
           <div className="p-7 border-x-black-500 border-2 relative">
             <img src={apostropheR} className=' absolute top-7 right-0 px-3' alt="" />
             <img src={apostropheL} alt="" className='absolute top-7 left-0 px-3'  />
-            <p className="medium-text px-3 ">
+            <p className="text-base lg:text-lg px-3 font-medium ">
               Lorem ipsum dolor sit amet consectetur. Sed iaculis et sapien
               neque. Lectus felis eu adipiscing dolor ut eget iaculis mauris
               nec. Purus rhoncus vel id tortor nulla dictum duis at vestibulum.
@@ -44,7 +44,7 @@ const Testimonial = () => {
               Vivamus diam enim commodo.
             </p>
           
-            <div className='flex justify-center items-center gap-4 py-4'>
+            <div className='flex justify-center items-center gap-4 py-5'>
               <span>
                 <img className=' profile-img' src={profileImg} alt="" />
               </span>

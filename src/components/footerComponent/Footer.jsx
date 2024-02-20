@@ -17,12 +17,11 @@ const Footer = () => {
   return (
     <div className="bg-black-200 text-white-100 py-10">
       <div
-        className="grid lg:grid-cols-3 grid-cols-1 py-6 gap-8 w-11/12"
-        style={{ maxWidth: "1440px", margin: "auto" }}
+        className="grid lg:grid-cols-3 grid-cols-1 py-6 gap-8 w-11/12 responsive"
       >
         <div className="flex flex-col gap-5 items-start">
           <Link to="/" onClick={handleLinkClick}>
-            <img
+            <img className="logo"
               src="https://res.cloudinary.com/dgeogsa3t/image/upload/v1707829958/zyjwm8fwclgatu1wzw3x.png"
               alt=""
             />
@@ -34,7 +33,7 @@ const Footer = () => {
           <ContactBtn />
         </div>
         <div className="flex flex-col lg:ps-20 gap-5 items-start">
-          <h2 className="text-2xl font-semibold">Quick Links</h2>
+          <h2 className="medium-text font-semibold">Quick Links</h2>
           <ul className="flex flex-col gap-3 justify-start items-start">
             <li>
               <Link to="/" onClick={handleLinkClick}>
@@ -60,11 +59,11 @@ const Footer = () => {
           </ul>
         </div>
         <div className="flex flex-col gap-3 items-start">
-          <h2 className="text-2xl font-semibold text-center lg:text-start">
+          <h2 className="medium-text font-semibold text-center lg:text-start">
             Contact Us
           </h2>
           <p className="text-start ">
-            158, Ikotun - Idumu Road, Nobex Bus Stop, Idumu Lagos.
+            158, Ikotun - Idumu Road, Nobex Bus Stop, <br /> Idumu Lagos.
           </p>
           <p className="text-start">08029074622</p>
           <p className="text-start">09032528531</p>

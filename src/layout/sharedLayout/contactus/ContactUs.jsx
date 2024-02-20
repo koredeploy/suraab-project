@@ -24,15 +24,15 @@ const ContactUs = () => {
   return (
     <div className="contact-background flex flex-col items-center justify-center">
       <div className="text-white-100 py-10 text-center w-11/12 mx-auto grid grid-cols-1 gap-7 ">
-        <h1 className="text-white-100 large-text ">
-          Ready to Book Your First <br /> Service
+        <h1 className="text-white-100 large-text w-full lg:w-3/5 xl:w-3/6 mx-auto">
+          Ready to Book Your First  Service
         </h1>
-        <p className="w-full lg:w-3/5 mx-auto medium-text ">
+        <p className=" ">
           Our mission is to redefine excellence in electrical solutions,
-          illuminating homes and lives with a commitment to safety, reliability,
+          illuminating homes and lives with a <br /> commitment  to safety, reliability,
           and innovation. We embark on this mission
         </p>
-        <div className="w-full mx-auto lg:w-3/4">
+        <div className="w-full mx-auto lg:w-3/4 xl:w-3/5">
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="py-5 w-full flex justify-center items-center"
