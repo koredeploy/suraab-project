@@ -1,5 +1,5 @@
 import "./HeroSection.scss";
-import arrow from "../../../../assets/arrow.png";
+// import arrow from "../../../../assets/arrow.png";
 import { Link } from "react-router-dom";
 import img from '../../../../assets/arrow.png'
 
