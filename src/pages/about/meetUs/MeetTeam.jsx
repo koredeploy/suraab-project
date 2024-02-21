@@ -8,7 +8,7 @@ const MeetTeam = () => {
    <div  className="meet">
      <div className=" flex flex-col gap-4 pb-14">
       <div className="flex flex-col gap-4 justify-center text-center py-10">
-        <h3 className="text-black-100 medium-text">Our Team</h3>
+        <h3 className="text-black-100 medium-text">OUR TEAM</h3>
         <h1 className="text-black-500 large-text">Meet The Team</h1>
       </div>
       <div className="flex flex-col lg:flex-row items-center gap-14 justify-center">
