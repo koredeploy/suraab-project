@@ -88,7 +88,7 @@ const Navbar = () => {
           onClick={closeMenu}
         >
           <nav>
-            <ul className="flex lg:flex-row flex-col gap-10 lg:gap-16 xl:gap-20 text-white">
+            <ul className="flex lg:flex-row flex-col items-center justify-center gap-10 lg:gap-16 xl:gap-20 text-white">
               <li>
                 <Link
                   to="/"
@@ -118,7 +118,7 @@ const Navbar = () => {
               </li>
             </ul>
           </nav>
-          <div className="mt-6 lg:mt-0 py-5">
+          <div className="mt-6 flex items-center justify-center lg:mt-0 py-5">
             <ContactBtn />
           </div>
         </div>
