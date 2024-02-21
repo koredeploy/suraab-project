@@ -14,7 +14,7 @@ const ContactBtn = () => {
     <div className="contactbtn">
       <button
         onClick={handleClick}
-        className="bg-red-400 lg:w-44 w-36 text-white-100 relative text-xl h-12 hover:border-2 border-white-100"
+        className="bg-red-400 lg:w-44 w-36 text-white-100 relative text-xl h-12 hover:border-2 hover:bg-black-500 border-white-100"
       >
         <span className="btneffect"></span>
         <span className="z-100">Contact Us</span>
