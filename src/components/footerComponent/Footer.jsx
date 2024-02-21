@@ -65,7 +65,7 @@ const Footer = () => {
            <h2 className="medium-text font-semibold  text-center lg:text-start">
               Contact Us
             </h2>
-            <p className=" text-start  w-11/12  py-5 ">
+            <p className=" text-start  w-11/12  pt-4 pb-2 ">
               158, Ikotun - Idumu Road, Nobex Bus Stop, Idumu Lagos.
             </p>
            <div className="flex gap-4">
