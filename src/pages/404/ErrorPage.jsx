@@ -2,7 +2,7 @@ import leftArrow from "../../assets/Line arrow-left.png";
 import imgError from "../../assets/404.png";
 const ErrorPage = () => {
   return (
-    <div className="flex items-center justify-center p-12">
+    <div className="flex flex-col lg:flex-row items-center justify-center p-12">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-5">
           <h1 className="text-black-400 large-text">Uh, Oh!</h1>
