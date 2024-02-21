@@ -65,7 +65,7 @@ const Navbar = () => {
       {/* Background overlay when mobile menu is active */}
       {show && (
         <div
-          className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40"
+          className="fixed top-0 left-0 w-full h-full bg-black opacity-75 z-40"
           onClick={closeMenu}
         />
       )}
