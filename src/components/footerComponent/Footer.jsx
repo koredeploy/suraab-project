@@ -25,7 +25,7 @@ const Footer = () => {
           <Link to="/" onClick={handleLinkClick}>
             <img className="" src={logo} alt="" />
           </Link>
-          <p className=" text-center lg:text-start ">
+          <p className=" text-center lg:text-start md:w-3/5 mx-auto lg:w-full ">
             Join me as I share timeless secrets on how to build your own academy
             that generates millions monthly.
           </p>
@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="hidden lg:block">
           <div className="flex flex-col lg:ps-20 gap-5 items-start ">
             <h2 className="medium-text font-semibold">Quick Links</h2>
-            <ul className="flex flex-col gap-3 justify-start items-start">
+            <ul className="flex flex-col gap-4 justify-start items-start">
               <li>
                 <Link to="/" onClick={handleLinkClick}>
                   Home
@@ -59,24 +59,31 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="hidden lg:block">
-          <div className="flex flex-col gap-3 items-start ">
-            <h2 className="medium-text font-semibold text-center lg:text-start">
+        <div className="">
+          <div className="flex flex-col gap-3 items-center lg:items-start  ">
+           <div className="hidden lg:block">
+           <h2 className="medium-text font-semibold  text-center lg:text-start">
               Contact Us
             </h2>
-            <p className="text-start w-11/12 ">
+            <p className=" text-start  w-11/12 ">
               158, Ikotun - Idumu Road, Nobex Bus Stop, Idumu Lagos.
             </p>
-            <p className="text-start">08029074622</p>
+           <div className="flex gap-4">
+           <p className="text-start">08029074622</p>
             <p className="text-start">09032528531</p>
+           </div>
+           </div>
+            <div>
+            <div className="flex flex-row justify-center items-center gap-6 py-4 lg:py-0">
+            <img className="social" src={whatsappIcon} alt="" />
+            <img className="social" src={facebookIcon} alt="" />
+            <img className="social" src={instagramIcon} alt="" />
+          </div>
+            </div>
           </div>
         </div>
-        <div className="block lg:hidden">
-          <div className="flex flex-row justify-center items-center gap-6 py-10">
-            <img src={whatsappIcon} alt="" />
-            <img src={facebookIcon} alt="" />
-            <img src={instagramIcon} alt="" />
-          </div>
+        <div className="">
+        
         </div>
       </div>
       <hr className="bg-gray-500" />
