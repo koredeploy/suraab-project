@@ -19,19 +19,7 @@ const FadedCarousel = () => {
       className="carousel-container"
      
     >
-      {/* <h1
-        className="carousel-heading"
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          zIndex: 1,
-          color: '#ffffff', // Adjust text color as needed
-        }}
-      >
-      
-      </h1> */}
+    
       <div
         className="background-image"
         style={{

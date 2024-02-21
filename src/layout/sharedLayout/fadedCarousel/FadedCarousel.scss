@@ -1,5 +1,6 @@
 @use "../../../scss/global/colors" as color;
 @use "../../../scss/utils/functions" as fn;
+@use '../../../scss/utils/mixins' as mixins;
 
 .carousel-container{
   position: relative;
@@ -7,12 +8,40 @@
   height: fn.rem(550);
 }
 
-
 @media (width < 700px){
   .carousel-container{
     height: fn.rem(450);
   }
 }
+
+
+// .carousel-heading{
+//   position: absolute;
+//   top: 25%;
+//   left: 5.5%;
+//   transform: translate(-50%, -50%);
+//   z-index: 70;
+//   color: white;
+//   @include mixins.responsive
+// }
+
+// .carousel-heading{
+//   position: absolute;
+//   top: 25%;
+//   left: 50%;
+//   transform: ''translate(-50%, -50%)';
+  
+// }
+
+// style={{
+//   position: 'absolute',
+//   top: '50%',
+//   left: '50%',
+//   transform: 'translate(-50%, -50%)',
+//   zIndex: 1,
+//   color: '#ffffff', // Adjust text color as needed
+// }}
+// >
 
 // .carousel-container{
 //   position: 'relative';
