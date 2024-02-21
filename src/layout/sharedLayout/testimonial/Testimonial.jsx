@@ -5,7 +5,7 @@ const Testimonial = () => {
   return (
     <div>
       <div className=" w-11/12 mx-auto py-10 responsive ">
-        <p className="text-center medium-text font-bold text-black-100 pb-3">WHAT OUR CUSTOMERS SAY</p>
+        <h4 className="text-black-100 medium-text text-center pb-3">WHAT OUR CUSTOMERS SAY</h4>
         <h2 className="text-red-400 text-center large-text">
           Don’t Just Take Our Word For It.
         </h2>
