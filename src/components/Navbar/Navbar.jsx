@@ -61,27 +61,35 @@ const Navbar = () => {
   };
 
   return (
-    <div
-      className={`fixed z-50 top-0 w-full ${
-        isTransparent ? "bg-opacity-30 bg-black" : ""
-      }`}
-    >
-      <header
-        
-        className="responsive relative w-11/12 text-white-100 flex justify-between items-center"
+    <div>
+      {/* Background overlay when mobile menu is active */}
+      {show && (
+        <div
+          className="fixed top-0 left-0 w-full h-full bg-black opacity-80 z-40"
+          onClick={closeMenu}
+        />
+      )}
+
+      <div
+        className={`fixed z-50 top-0 w-full ${
+          isTransparent ? "bg-opacity-30 bg-black" : ""
+        }`}
       >
-        <div className="flex justify-between xl:w-2/5 lg:w-2/5 w-full items-center py-5 ">
-          <Link to="/">
-            <img src={suraab_logo} alt="" className="hidden lg:block desktop-logo" />
-            <img src={suraab_mobile} alt="" className="block lg:hidden logo" />
-          </Link>
-          <div
-            className="lg:hidden block fixed top-5 pb-3 pr-3  md:pr-6 z-50  right-0"
-            onClick={showHamburger}
-          >
-            <Hamburger color="red" toggled={isOpen} toggle={setOpen} />
+        <header
+          className="responsive relative w-11/12 text-white-100 flex justify-between items-center"
+        >
+          <div className="flex justify-between xl:w-2/5 lg:w-2/5 w-full items-center py-5 ">
+            <Link to="/">
+              <img src={suraab_logo} alt="" className="hidden lg:block desktop-logo" />
+              <img src={suraab_mobile} alt="" className="block lg:hidden logo" />
+            </Link>
+            <div
+              className="lg:hidden block fixed top-5 pb-3 pr-3  md:pr-6 z-50  right-0"
+              onClick={showHamburger}
+            >
+              <Hamburger color="red" toggled={isOpen} toggle={setOpen} />
+            </div>
           </div>
-        </div>
 
         <div
           className={`${show ? "menu" : ""} lg:flex items-center justify-between  gap-10 lg:gap-16 xl:gap-20 hidden border-0 lg:border-0 border-t-2 border-stone-700`}
