@@ -14,7 +14,7 @@
 }
 
 
-@media(width > 465px){
+@media(width > fn.rem(465)){
   .logo{
     @include mixins.desktopLogo;
   }
@@ -99,9 +99,3 @@ nav a::after {
   }
 }
 
-
-// @media screen and (min-width: fn.rem(700)) {
-//   header .menu {
-//     padding-top: 6rem;
-//   }
-// }
