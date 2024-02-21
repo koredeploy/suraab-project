@@ -60,12 +60,12 @@ const Footer = () => {
           </div>
         </div>
         <div className="">
-          <div className="flex flex-col gap-3 items-center lg:items-start  ">
+          <div className="flex flex-col gap-3 lg:gap-5 items-center lg:items-start  ">
            <div className="hidden lg:block">
            <h2 className="medium-text font-semibold  text-center lg:text-start">
               Contact Us
             </h2>
-            <p className=" text-start  w-11/12 ">
+            <p className=" text-start  w-11/12  py-5 ">
               158, Ikotun - Idumu Road, Nobex Bus Stop, Idumu Lagos.
             </p>
            <div className="flex gap-4">
