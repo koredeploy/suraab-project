@@ -9,10 +9,10 @@ const HeroSection = ({img}) => {
         <h1 className="text-white-100 large-text pt-24 ">Services</h1>
         <div className="flex justify-center items-center gap-2 py-5 ">
           <Link to="/">
-            <p className="text-black-100 text-3xl font-medium pb-2">Home</p>
+            <p className="text-black-100 text-3xl font-medium hidden md:block">Home</p>
           </Link>
           <span>
-            <img src={img} alt="" />
+            <img src={img} alt="" className='hidden md:block' />
           </span>
           <h5 className="text-white-100 text-3xl font-semibold">Services</h5>
         </div>
