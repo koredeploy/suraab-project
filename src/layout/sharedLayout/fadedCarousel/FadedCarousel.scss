@@ -5,14 +5,25 @@
 .carousel-container{
   position: relative;
   width: 100%;
-  height: fn.rem(550);
+  height: fn.rem(540);
+  max-height: fn.rem(550);
 }
 
-@media (width < 700px){
+@media (width < fn.rem(700)){
   .carousel-container{
     height: fn.rem(450);
+    max-height: fn.rem(460);
   }
 }
+
+
+@media (width < fn.rem(425)){
+  .carousel-container{
+    height: fn.rem(450);
+    max-height: fn.rem(455);
+  }
+}
+
 
 
 // .carousel-heading{
