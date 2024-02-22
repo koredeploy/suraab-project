@@ -11,8 +11,8 @@
   background-position: center;
 }
 
-@media(width > 700px){
-  .service-bg{
+@media (width > fn.rem(700)) {
+  .service-bg {
     min-height: fn.rem(450);
     height: auto;
   }

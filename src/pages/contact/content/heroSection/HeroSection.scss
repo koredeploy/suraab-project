@@ -1,5 +1,5 @@
-@use '../../../../scss/style.scss';
-@use '../../../../scss/utils/functions' as fn;
+@use "../../../../scss/style.scss";
+@use "../../../../scss/utils/functions" as fn;
 
 .contact-bg {
   background-image: url(../../../../assets/contact_us_bg.png);
@@ -12,9 +12,9 @@
   background-position: center;
 }
 
-@media (width > 700px) {
-    .contact-bg{
-      min-height: fn.rem(448);
-      height: auto;
-    }
- }
+@media (width > fn.rem(700)) {
+  .contact-bg {
+    min-height: fn.rem(448);
+    height: auto;
+  }
+}

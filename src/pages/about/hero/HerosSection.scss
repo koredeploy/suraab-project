@@ -11,7 +11,7 @@
   background-position: center;
 }
 
-@media (width > 700px) {
+@media (width > fn.rem(700)) {
   .about-bg {
     min-height: fn.rem(448);
     height: auto;
