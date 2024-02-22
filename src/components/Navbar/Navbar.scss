@@ -1,5 +1,6 @@
 @use '../../scss/utils/functions'as fn;
 @use '../../scss/utils/mixins'as mixins;
+@use '../../scss/global/colors' as colors;
 
 
 .responsive{
@@ -30,9 +31,9 @@ nav a::after {
   bottom: fn.rem(-6);
   left: 0;
   width: 0;
-  height: fn.rem(-6) !important;
+  height: fn.rem(4) ;
   border-radius: fn.rem(3);
-  background-color: #d6c3c3 !important;
+  background-color: colors.$white-200;
   transition: width 0.5s ease-in;
 } 
   
