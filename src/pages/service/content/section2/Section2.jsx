@@ -1,6 +1,6 @@
-import s1 from "../../../../assets/service_img1.png";
-import s2 from "../../../../assets/service_img2.png";
-import s3 from "../../../../assets/service_img3.png";
+import s1 from "../../../../assets/service_img1.webp";
+import s2 from "../../../../assets/service_img2.webp";
+import s3 from "../../../../assets/service_img3.webp";
 import check from "../../../../assets/check.png";
 import "./Section2.scss";
 import ContactBtn from "../../../../components/ContactBtn/ContactBtn";

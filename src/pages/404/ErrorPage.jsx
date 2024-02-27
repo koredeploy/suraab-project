@@ -1,5 +1,5 @@
 import leftArrow from "../../assets/Line arrow-left.png";
-import imgError from "../../assets/404.png";
+import imgError from "../../assets/404.webp";
 const ErrorPage = () => {
   return (
     <div className="flex flex-col-reverse lg:flex-row items-center justify-center p-12">
