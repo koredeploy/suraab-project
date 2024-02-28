@@ -1,9 +1,9 @@
-import React from 'react'
+
 import ContactBtn from '../../../components/ContactBtn/ContactBtn'
 import check from '../../../assets/check.png'
-import elect1 from '../../../assets/elect1.png'
-import elect2 from '../../../assets/elect2b.png'
-import elect3 from '../../../assets/elect2c.png'
+import elect1 from '../../../assets/elect1.webp'
+import elect2 from '../../../assets/elect2b.webp'
+import elect3 from '../../../assets/elect2c.webp'
 const OurMission = () => {
   return (
     <div className='responsive'>

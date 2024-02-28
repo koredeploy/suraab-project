@@ -2,7 +2,7 @@
 @use "../../../scss/utils/functions" as fn;
 
 .about-bg {
-  background-image: url(../../../assets/about_us_background.png);
+  background-image: url(../../../assets/about_us_background.webp);
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
@@ -11,7 +11,7 @@
   background-position: center;
 }
 
-@media (width > 700px) {
+@media (width > fn.rem(700)) {
   .about-bg {
     min-height: fn.rem(448);
     height: auto;

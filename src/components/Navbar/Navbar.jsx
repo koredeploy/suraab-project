@@ -91,47 +91,47 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div
-            className={`${show ? "menu" : ""} lg:flex items-center justify-between  gap-10 lg:gap-16 xl:gap-20 hidden border-0 lg:border-0 border-t-2 border-stone-700`}
-            onClick={closeMenu}
-          >
-            <nav>
-              <ul className="flex lg:flex-row flex-col items-center justify-center gap-10 lg:gap-16 xl:gap-20 text-white">
-                <li>
-                  <Link
-                    to="/"
-                    onClick={() => handleClick(0)}
-                    className={`${isActive === 0 && "active"} relative`}
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/aboutus"
-                    onClick={() => handleClick(1)}
-                    className={`${isActive === 1 && "active"} relative`}
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/service"
-                    onClick={() => handleClick(2)}
-                    className={`${isActive === 2 && "active"} relative `}
-                  >
-                    Services
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-            <div className="mt-6 flex items-center justify-center lg:mt-0 py-5">
-              <ContactBtn />
-            </div>
+        <div
+          className={`${show ? "menu" : ""} lg:flex items-center justify-between  gap-10 lg:gap-16 xl:gap-20 hidden border-0 lg:border-0 border-t-2 border-stone-700`}
+          onClick={closeMenu}
+        >
+          <nav>
+            <ul className="flex lg:flex-row flex-col items-center gap-10 lg:gap-16 xl:gap-20 text-white">
+              <li>
+                <Link
+                  to="/"
+                  onClick={() => handleClick(0)}
+                  className={`${isActive === 0 && "active"} relative`}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/aboutus"
+                  onClick={() => handleClick(1)}
+                  className={`${isActive === 1 && "active"} relative`}
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/service"
+                  onClick={() => handleClick(2)}
+                  className={`${isActive === 2 && "active"} relative `}
+                >
+                  Services
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          <div className="mt-6 lg:mt-0 py-5 flex justify-center items-center">
+            <ContactBtn />
           </div>
-        </header>
-      </div>
+        </div>
+      </header>
+    </div>
     </div>
   );
 };
