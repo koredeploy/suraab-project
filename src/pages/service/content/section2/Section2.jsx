@@ -16,6 +16,7 @@ const Section2 = () => {
             <img
               src={s1}
               alt=""
+              loading="lazy"
               className="border-img border-8 border-white-100 "
             />
             <div className="grid grid-cols-1 gap-4">
@@ -55,6 +56,7 @@ const Section2 = () => {
             <img
               src={s2}
               alt=""
+              loading="lazy"
               className="border-img border-8 border-white-100 "
             />
             <div className="grid grid-cols-1 gap-3">
@@ -95,6 +97,7 @@ const Section2 = () => {
             <img
               src={s3}
               alt=""
+              loading="lazy"
               className="border-img border-8 border-white-100 "
             />
             <div className="grid grid-cols-1 gap-3">

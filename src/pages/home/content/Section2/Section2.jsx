@@ -12,7 +12,7 @@ const Section2 = () => {
                         <p>Years Experience</p>
                     </div>
                     <div className='sm:pt-5 xl:pt-0'>
-                    <img className='-z-10 w-full' src={engineer} alt="" />
+                    <img className='-z-10 w-full' src={engineer} alt="" loading='lazy' />
                     <div className='block lg:hidden py-5 bg-white-100 text-center shadow-2xl'>
                         <h1 className='text-red-400 large-text'>20+</h1>
                         <p>Years Experience</p>
