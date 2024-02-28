@@ -15,6 +15,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      setIsTransparent(true)
       const scrollPosition = window.scrollY;
       // Change the value according to the scroll position where you want the transparency to change
       const scrollThreshold = 10;
