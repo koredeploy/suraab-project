@@ -1,5 +1,6 @@
 @use "../../../../scss/style.scss";
 @use "../../../../scss/utils/functions" as fn;
+@use "../../../../scss/global/colors" as color;
 
 .service-bg {
   background-image: url(../../../../assets/service-bg.webp);
@@ -9,6 +10,7 @@
   height: auto;
   min-height: fn.rem(300);
   background-position: center;
+  background-color: color.$black-500;
 }
 
 @media (width > fn.rem(700)) {

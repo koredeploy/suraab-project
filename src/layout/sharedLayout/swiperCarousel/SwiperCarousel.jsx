@@ -17,7 +17,6 @@ const SwiperCarousel = () => {
       <img src={panorama} alt="" className="absolute bottom-1 z-30 w-full" />
 
       <Swiper
-
 breakpoints={{
     320: {
       slidesPerView: 1,
@@ -47,7 +46,6 @@ breakpoints={{
         navigation={true}
         modules={[Autoplay]}
         className="mySwiper"
-      
       >
         <SwiperSlide>
           <img src={slide1} alt="" />
