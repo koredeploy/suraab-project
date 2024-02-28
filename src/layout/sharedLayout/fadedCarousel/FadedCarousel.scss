@@ -5,8 +5,9 @@
 .carousel-container{
   position: relative;
   width: 100%;
-  height: fn.rem(540);
-  max-height: fn.rem(550);
+  height: fn.rem(550);
+  background-color: color.$black-500;
+  
 }
 
 @media (width < fn.rem(700)){

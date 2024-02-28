@@ -1,4 +1,5 @@
 @use "../../../scss/style.scss";
+@use "../../../scss/global/colors" as color;
 @use "../../../scss/utils/functions" as fn;
 
 .about-bg {
@@ -9,6 +10,7 @@
   height: auto;
   min-height: fn.rem(300);
   background-position: center;
+  background-color: color.$black-500;
 }
 
 @media (width > fn.rem(700)) {
