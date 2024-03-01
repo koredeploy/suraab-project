@@ -1,8 +1,8 @@
 import "./MeetTeam.scss";
-import frame1 from "../../../assets/about_us_frame1.png";
-import frame2 from "../../../assets/about_us_frame2.png";
-import frame3 from "../../../assets/about_us_frame3.png";
-import frame4 from "../../../assets/about_us_frame4.png";
+import frame1 from "../../../assets/about_us_frame1.webp";
+import frame2 from "../../../assets/about_us_frame2.webp";
+import frame3 from "../../../assets/about_us_frame3.webp";
+import frame4 from "../../../assets/about_us_frame4.webp";
 const MeetTeam = () => {
   return (
    <div  className="meet">

@@ -1,23 +1,23 @@
-@use '../../../../scss/style.scss';
-@use '../../../../scss/global/colors' as color;
-@use '../../../../scss/utils/mixins' as mixins;
-@use '../../../../scss/utils/functions' as fn;
+@use "../../../../scss/style.scss";
+@use "../../../../scss/global/colors" as color;
+@use "../../../../scss/utils/mixins" as mixins;
+@use "../../../../scss/utils/functions" as fn;
 
-.section-body{
+.section-body {
   background-color: color.$red-300;
-  background-image: url('../../../../assets/naked-wire.png'), url('../../../../assets/riple-effect.png');
+  background-image: url("../../../../assets/naked-wire.png"),
+    url("../../../../assets/riple-effect.png");
   background-repeat: no-repeat;
   background-position: 0% 10%, right top;
-  .responsive{
+  .responsive {
     @include mixins.responsive;
 
-    @media(width > 1024px){
-      .img-box{
+    @media (width > fn.rem(1024)) {
+      .img-box {
         max-width: fn.rem(361);
         height: fn.rem(327);
         margin: auto;
       }
     }
   }
-
 }

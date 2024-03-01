@@ -1,5 +1,6 @@
 @use '../../scss/utils/functions'as fn;
 @use '../../scss/utils/mixins'as mixins;
+@use '../../scss/global/colors' as colors;
 
 
 .responsive{
@@ -21,7 +22,7 @@
 }
 
 .bg-black {
-  background-color: rgba(0, 0, 0, 0.926) !important;
+  background-color: rgba(0, 0, 0, 0.926);
 }
 
 nav a::after {
@@ -30,9 +31,9 @@ nav a::after {
   bottom: fn.rem(-6);
   left: 0;
   width: 0;
-  height: fn.rem(-6) !important;
+  height: fn.rem(4) ;
   border-radius: fn.rem(3);
-  background-color: #d6c3c3 !important;
+  background-color: colors.$white-200;
   transition: width 0.5s ease-in;
 } 
   
@@ -47,14 +48,14 @@ nav a::after {
 
   nav a.active::after {
     width: 100%;
-    background-color: #dc2626 !important;
+    background-color: #dc2626;
   }
 
 
 @media screen and (max-width: fn.rem(976)) {
   header .menu {
-      display: block !important;
-      background-color: rgba(0, 0, 0, 0.926) !important;
+      display: block ;
+      background-color: rgba(0, 0, 0, 0.926);
       position: fixed;
       padding: 1rem;
       margin: 0;
@@ -96,6 +97,11 @@ nav a::after {
     justify-content: center;
     align-items: center;
     box-shadow:  0 fn.rem(2) fn.rem(50) rgba(0, 0, 0, 0.692);
+  }
+}
+@media(width < fn.rem(450)) {
+  header .menu{
+    padding-top: 6.1rem;
   }
 }
 

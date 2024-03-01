@@ -1,6 +1,6 @@
-import s1 from "../../../../assets/service_img1.png";
-import s2 from "../../../../assets/service_img2.png";
-import s3 from "../../../../assets/service_img3.png";
+import s1 from "../../../../assets/service_img1.webp";
+import s2 from "../../../../assets/service_img2.webp";
+import s3 from "../../../../assets/service_img3.webp";
 import check from "../../../../assets/check.png";
 import "./Section2.scss";
 import ContactBtn from "../../../../components/ContactBtn/ContactBtn";
@@ -16,6 +16,7 @@ const Section2 = () => {
             <img
               src={s1}
               alt=""
+              loading="lazy"
               className="border-img border-8 border-white-100 "
             />
             <div className="grid grid-cols-1 gap-4">
@@ -55,6 +56,7 @@ const Section2 = () => {
             <img
               src={s2}
               alt=""
+              loading="lazy"
               className="border-img border-8 border-white-100 "
             />
             <div className="grid grid-cols-1 gap-3">
@@ -95,6 +97,7 @@ const Section2 = () => {
             <img
               src={s3}
               alt=""
+              loading="lazy"
               className="border-img border-8 border-white-100 "
             />
             <div className="grid grid-cols-1 gap-3">

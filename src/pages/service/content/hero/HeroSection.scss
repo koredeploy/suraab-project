@@ -3,7 +3,7 @@
 @use "../../../../scss/global/colors" as color;
 
 .service-bg {
-  background-image: url(../../../../assets/service-bg.png);
+  background-image: url(../../../../assets/service-bg.webp);
   background-repeat: no-repeat;
   object-fit: cover;
   background-size: cover;
@@ -13,8 +13,8 @@
   background-color: color.$black-500;
 }
 
-@media(width > 700px){
-  .service-bg{
+@media (width > fn.rem(700)) {
+  .service-bg {
     min-height: fn.rem(450);
     height: auto;
   }

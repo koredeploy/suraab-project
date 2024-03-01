@@ -14,7 +14,7 @@ const FadedCarousel = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 7000);
+    }, 10000);
 
     return () => clearInterval(intervalId);
   }, [images.length]);

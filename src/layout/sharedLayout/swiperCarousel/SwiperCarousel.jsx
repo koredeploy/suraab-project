@@ -1,14 +1,13 @@
 import "./SwiperCarousel.scss";
 import "swiper/css";
 import "swiper/css/pagination";
-import { useRef, useState } from "react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Pagination, Autoplay } from "swiper/modules";
-import slide1 from "../../../assets/slide1.png";
-import slide2 from "../../../assets/slide2.png";
-import slidethree from "../../../assets/slide3.png";
+import { Autoplay } from "swiper/modules";
+import slide1 from "../../../assets/slide1.webp";
+import slide2 from "../../../assets/slide2.webp";
+import slidethree from "../../../assets/slide3.webp";
 import panorama from "../../../assets/paranoma.png";
 
 const SwiperCarousel = () => {
@@ -18,7 +17,6 @@ const SwiperCarousel = () => {
       <img src={panorama} alt="" className="absolute bottom-1 z-30 w-full" />
 
       <Swiper
-
 breakpoints={{
     320: {
       slidesPerView: 1,
@@ -48,7 +46,6 @@ breakpoints={{
         navigation={true}
         modules={[Autoplay]}
         className="mySwiper"
-      
       >
         <SwiperSlide>
           <img src={slide1} alt="" />

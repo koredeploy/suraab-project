@@ -10,11 +10,21 @@
   
 }
 
-@media (width < 700px){
+@media (width < fn.rem(700)){
   .carousel-container{
     height: fn.rem(450);
+    max-height: fn.rem(460);
   }
 }
+
+
+@media (width < fn.rem(425)){
+  .carousel-container{
+    height: fn.rem(450);
+    max-height: fn.rem(455);
+  }
+}
+
 
 
 // .carousel-heading{
