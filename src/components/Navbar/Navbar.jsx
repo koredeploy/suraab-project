@@ -93,7 +93,7 @@ const Navbar = () => {
           </div>
 
         <div
-          className={`${show ? "menu" : ""} lg:flex items-center justify-between  gap-10 lg:gap-16 xl:gap-20 hidden border-0 lg:border-0 border-t-2 border-stone-700`}
+          className={`${show ? "menu" : ""} pt-20 lg:pt-0 xl:pt-0 lg:flex items-center justify-between  gap-10 lg:gap-16 xl:gap-20 hidden border-0 lg:border-0 border-t-2 border-stone-700`}
           onClick={closeMenu}
         >
           <nav>
