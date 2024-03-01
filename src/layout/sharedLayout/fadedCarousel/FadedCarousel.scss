@@ -6,6 +6,8 @@
   position: relative;
   width: 100%;
   height: fn.rem(550);
+  background-color: color.$black-500;
+  
 }
 
 @media (width < 700px){
