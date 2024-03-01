@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./FadedCarousel.scss";
+import LazyLoad from "react-lazy-load"
 
 const FadedCarousel = () => {
   const [index, setIndex] = useState(0);
@@ -20,6 +21,7 @@ const FadedCarousel = () => {
 
   return (
     <div className="carousel-container">
+      <LazyLoad height={500}>
       <div
         className="background-image"
         style={{
@@ -34,6 +36,7 @@ const FadedCarousel = () => {
           transition: "background-image 1s ease",
         }}
       ></div>
+      </LazyLoad>
     </div>
   );
 };
